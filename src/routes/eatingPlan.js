@@ -1,19 +1,19 @@
 const express = require('express')
-const diets = require('../usecases/diets')
+const eatingPlan = require('../usecases/eatingPlan')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response) => {
-  console.log('middleware en GET/diets')
+router.get('/:id', auth, (request, response, next) => {
+  console.log('middleware en GET/eatingPlan')
+  next()
 }, async (request, response) => {
   try {
-    const { id } = request.params
-    const dietsGet = await diets.getById(id)
+    const alleatingPlan = await eatingPlan.getAll()
     response.json({
       success: true,
-      message: `diets with id ${id} get`,
+      message: 'all eatingPlan',
       data: {
-        diets: dietsGet
+        eatingPlan: alleatingPlan
       }
     })
   } catch (error) {
@@ -27,12 +27,12 @@ router.get('/:id', auth, (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    const newdiets = await diets.create(request.body)
+    const neweatingPlan = await eatingPlan.create(request.body)
     response.json({
       success: true,
-      message: 'diets add',
+      message: 'eatingPlan add',
       data: {
-        diets: newdiets
+        eatingPlan: neweatingPlan
       }
     })
   } catch (error) {
@@ -47,12 +47,12 @@ router.post('/', async (request, response) => {
 router.delete('/:id', auth, async (request, response) => {
   try {
     const { id } = request.params
-    const dietsDeleted = await diets.deleteById(id)
+    const eatingPlanDeleted = await eatingPlan.deleteById(id)
     response.json({
       succes: true,
-      message: `diets with id ${id} deleted`,
+      message: `eatingPlan with id ${id} deleted`,
       data: {
-        diets: dietsDeleted
+        eatingPlan: eatingPlanDeleted
       }
     })
   } catch (error) {
@@ -67,12 +67,12 @@ router.delete('/:id', auth, async (request, response) => {
 router.patch('/:id', auth, async (request, response) => {
   try {
     const { id } = request.params
-    const dietsUpdate = await diets.updateById(id, request.body)
+    const eatingPlanUpdate = await eatingPlan.updateById(id, request.body)
     response.json({
       success: true,
-      message: `diets with id ${id} updated`,
+      message: `eatingPlan with id ${id} updated`,
       data: {
-        diets: dietsUpdate
+        eatingPlan: eatingPlanUpdate
       }
     })
   } catch (error) {

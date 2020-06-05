@@ -1,19 +1,19 @@
 const express = require('express')
-const diets = require('../usecases/diets')
+const dishes = require('../usecases/dishes')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response) => {
-  console.log('middleware en GET/diets')
+router.get('/:id', auth, (request, response, next) => {
+  console.log('middleware en GET/dishes')
+  next()
 }, async (request, response) => {
   try {
-    const { id } = request.params
-    const dietsGet = await diets.getById(id)
+    const alldishes = await dishes.getAll()
     response.json({
       success: true,
-      message: `diets with id ${id} get`,
+      message: 'all dishes',
       data: {
-        diets: dietsGet
+        dishes: alldishes
       }
     })
   } catch (error) {
@@ -27,12 +27,12 @@ router.get('/:id', auth, (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    const newdiets = await diets.create(request.body)
+    const newdishes = await dishes.create(request.body)
     response.json({
       success: true,
-      message: 'diets add',
+      message: 'dishes add',
       data: {
-        diets: newdiets
+        dishes: newdishes
       }
     })
   } catch (error) {
@@ -47,12 +47,12 @@ router.post('/', async (request, response) => {
 router.delete('/:id', auth, async (request, response) => {
   try {
     const { id } = request.params
-    const dietsDeleted = await diets.deleteById(id)
+    const dishesDeleted = await dishes.deleteById(id)
     response.json({
       succes: true,
-      message: `diets with id ${id} deleted`,
+      message: `dishes with id ${id} deleted`,
       data: {
-        diets: dietsDeleted
+        dishes: dishesDeleted
       }
     })
   } catch (error) {
@@ -67,12 +67,12 @@ router.delete('/:id', auth, async (request, response) => {
 router.patch('/:id', auth, async (request, response) => {
   try {
     const { id } = request.params
-    const dietsUpdate = await diets.updateById(id, request.body)
+    const dishesUpdate = await dishes.updateById(id, request.body)
     response.json({
       success: true,
-      message: `diets with id ${id} updated`,
+      message: `dishes with id ${id} updated`,
       data: {
-        diets: dietsUpdate
+        dishes: dishesUpdate
       }
     })
   } catch (error) {

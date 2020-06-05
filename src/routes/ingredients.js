@@ -3,17 +3,17 @@ const ingredients = require('../usecases/ingredients')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response) => {
+router.get('/:id', auth, (request, response, next) => {
   console.log('middleware en GET/ingredients')
+  next()
 }, async (request, response) => {
   try {
-    const { id } = request.params
-    const ingredientsGet = await ingredients.findById(id)
+    const allIngredients = await ingredients.getAll()
     response.json({
       success: true,
-      message: `ingredient with id ${id} get`,
+      message: 'all ingredients',
       data: {
-        ingredient: ingredientsGet
+        ingredients: allIngredients
       }
     })
   } catch (error) {
