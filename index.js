@@ -1,4 +1,4 @@
-cosnt server = require('./src/server.js')
+const server = require('./src/server.js')
 const db = require('./src/lib/db')
 
 async function main () {
