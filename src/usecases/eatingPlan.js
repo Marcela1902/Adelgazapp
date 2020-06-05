@@ -1,22 +1,22 @@
 const bcrypt = require('bcrypt')
 const jwt = require('../lib/jwt')
-const diets = require('../models/diets')
+const eatingPlan= require('../models/eatingPlan')
 
 function getAll () {
-    return diets.find({})
+    return eatingPlan.find({})
   }
 
 
-function create (dietsData) {
-  return diets.create(dietsData)
+function create (eatingPlanData) {
+  return eatingPlan.create(eatingPlanData)
 }
 
 function deleteById (id) {
-    return diets.findByIdAndRemove(id)
+    return eatingPlan.findByIdAndRemove(id)
   }
   
-  function updateById (id, newdietsData) {
-    return diets.findByIdAndUpdate(id, newdietsData, { new: true })
+  function updateById (id, neweatingPlanData) {
+    return eatingPlan.findByIdAndUpdate(id, neweatingPlanData, { new: true })
   }
   
   module.exports = {
