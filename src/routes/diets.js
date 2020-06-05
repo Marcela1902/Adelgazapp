@@ -3,17 +3,17 @@ const diets = require('../usecases/diets')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response) => {
+router.get('/:id', auth, (request, response, next) => {
   console.log('middleware en GET/diets')
+  next()
 }, async (request, response) => {
   try {
-    const { id } = request.params
-    const dietsGet = await diets.getById(id)
+    const allDiets = await diets.getAll()
     response.json({
       success: true,
-      message: `diets with id ${id} get`,
+      message: 'all diets',
       data: {
-        diets: dietsGet
+        diets: allDiets
       }
     })
   } catch (error) {

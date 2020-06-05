@@ -1,16 +1,23 @@
 const express = require('express')
 const cors = require('cors')
 
-const postsRouter = require('./routes/post')
 const usersRouter = require('./routes/users')
 const authRouter = require('./routes/auth')
+
+const dietsRouter = require('./routes/diets')
+const dishesRouter = require('./routes/dishes')
+const eatingPlanRouter = require('./routes/eatingPlan')
+const ingredientsRouter = require('./routes/ingredients')
 
 const app = express()
 
 app.use(express.json())
 app.use(cors())
 
-app.use('/posts', postsRouter)
+app.use('/diets', dietsRouter)
+app.use('/dishes', dishesRouter)
+app.use('/eatingPlan', eatingPlanRouter)
+app.use('/ingredients', ingredientsRouter)
 
 app.use((request, response, next) => {
   console.log(`>[${request.method}] ${request.url} body:${JSON.stringify(request.body)}`)
