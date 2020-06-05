@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const DB_USER = 'NoeAvila'
 const DB_PASSWORD = 'sofia2688'
 const DB_HOST = '7a-generacion-xw5aa.mongodb.net'
-const DB_NAME = 'kodemia'
+const DB_NAME = 'fitu'
 const url = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`
 
 function connect () {
