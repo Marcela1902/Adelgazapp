@@ -1,11 +1,11 @@
 {
   "name": "fityou-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Visión del Proyecto",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,13 @@
   "devDependencies": {
     "nodemon": "^2.0.4",
     "standard": "^14.3.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcela1902/Adelgazapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Marcela1902/Adelgazapp/issues"
+  },
+  "homepage": "https://github.com/Marcela1902/Adelgazapp#readme"
 }

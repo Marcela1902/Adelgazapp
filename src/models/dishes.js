@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const dishesSchema = new mongoose.Schema({
-  dishes: {
+  diets: {
     name: {
       type: String,
       required: true
@@ -20,4 +20,4 @@ const dishesSchema = new mongoose.Schema({
     }
   }
 })
-module.exports = mongoose.model('dishes', dishesSchema)
+module.exports = mongoose.model('diets', dishesSchema)
