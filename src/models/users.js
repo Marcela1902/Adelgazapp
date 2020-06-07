@@ -45,10 +45,22 @@ const usersSchema = new mongoose.Schema({
     }
   },
 
+  diets: {
+    name: {
+      type: String,
+      required: true,
+      enum: ['dieta de volumen', 'dieta de tonificacion', 'dieta para adelgazar']
+    },
+    category: {
+      type: String,
+      required: true
+    }
+  },
+
   direction: {
     street: {
       type: String,
-      require: true
+      required: true
     },
     CP: {
       type: Number
@@ -69,5 +81,6 @@ const usersSchema = new mongoose.Schema({
       type: String
     }
   }
+
 })
 module.exports = mongoose.model('users', usersSchema)
