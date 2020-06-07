@@ -1,17 +1,27 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 const eatingPlanSchema = new mongoose.Schema({
   eatingPlan: {
     name: {
       type: String,
-      require: true
+      required: true
     },
     description: {
       type: String,
       maxlength: 400
     },
-    foodName: {
+    foodType: {
       type: String,
-      require: true
+      required: true,
+      enum: ['desayuno', 'almuerzo', 'comida', 'cena']
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'users'
+    },
+    dishes: {
+      type: Schema.Types.ObjectId,
+      ref: 'dishes'
     }
 
   }

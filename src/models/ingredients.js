@@ -1,18 +1,36 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 const ingredientsSchema = new mongoose.Schema({
   ingredients: {
     name: {
       type: String,
-      require: true
+      required: true
     },
     grams: {
       type: Number,
-      require: true
+      required: true
     },
     price: {
       type: Number,
-      require: true
+      required: true
+    },
+    image: {
+      type: String
+
+    },
+    // user: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'users'
+    // },
+    dishes: {
+      type: Schema.Types.ObjectId,
+      ref: 'dishes'
     }
+    // eatingPlan: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'eatingPlan'
+    // }
+
   }
 })
 module.exports = mongoose.model('ingredients', ingredientsSchema)
