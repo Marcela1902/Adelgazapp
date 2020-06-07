@@ -4,9 +4,8 @@ const jwt = require('../lib/jwt')
 
 const Users = require('../models/users')
 
-async function getAll () {
-  const allUsers = await Users.find()
-  return allUsers
+function getAll (id) {
+  return Users.find(id)
 }
 
 function create (userData) {
