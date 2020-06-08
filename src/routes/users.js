@@ -23,7 +23,7 @@ router.get('/', auth, (request, response, next) => {
   }
 })
 
-router.post('/', async (request, response) => {
+/*router.post('/', async (request, response) => {
   try {
     const newUser = await users.create(request.body)
     response.json({
@@ -40,7 +40,7 @@ router.post('/', async (request, response) => {
       error: error.message
     })
   }
-})
+})*/
 
 router.delete('/:id', auth, async (request, response) => {
   try {

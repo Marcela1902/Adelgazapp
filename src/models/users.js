@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const usersSchema = new mongoose.Schema({
+ 
   personalData: {
     name: {
       type: String,
@@ -14,22 +15,25 @@ const usersSchema = new mongoose.Schema({
       type: Number,
       minlength: 10
     },
+    email: {
+      type: String,
+      require: true,
+      unique: true,
+     // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+    },
+    password: {
+      type: String,
+      require: true,
+      minLength: 8
+    },
+
     gender: {
       type: String
     }
   },
 
-  email: {
-    type: String,
-    required: true
-
-  },
-
-  password: {
-    type: String,
-    required: true,
-    minlength: 8
-  },
+ 
+ 
 
   complexion: {
     height: {
@@ -40,12 +44,12 @@ const usersSchema = new mongoose.Schema({
     },
     wristDiameter: {
       type: Number,
-      require: true,
+      
       minlength: 2
     }
   },
 
-  diets: {
+  /*diets: {
     name: {
       type: String,
       required: true,
@@ -53,14 +57,14 @@ const usersSchema = new mongoose.Schema({
     },
     category: {
       type: String,
-      required: true
+     
     }
-  },
+  },*/
 
   direction: {
     street: {
       type: String,
-      required: true
+      
     },
     CP: {
       type: Number
