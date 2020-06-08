@@ -15,6 +15,17 @@ const eatingPlanSchema = new mongoose.Schema({
       required: true,
       enum: ['desayuno', 'almuerzo', 'comida', 'cena']
     },
+    diets: {
+      name: {
+        type: String,
+        required: true,
+        enum: ['dieta de volumen', 'dieta de tonificacion', 'dieta para adelgazar']
+      },
+      category: {
+        type: String,
+        required: true
+      }
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: 'users'

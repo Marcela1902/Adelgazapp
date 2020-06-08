@@ -13,4 +13,4 @@ main()
   .then(() => {
     console.log('SERVER IS READY')
   })
-  .catch(error => console.error('ERROR:'. error))
+  .catch(error => console.error('ERROR:', error))
