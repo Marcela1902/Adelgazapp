@@ -20,25 +20,28 @@ function updateById (id, newUserData) {
   return Users.findByIdAndUpdate(id, newUserData)
 }
 
-async function signup (newUserData) {
-  const { email, password } = newUserData
+async function signup (newUsersData) {
+  const { email, password } = newUsersData
+  console.log(email, password)
   if (!email) throw new Error('Email is required')
-  const userAlreadyExists = await Users.findOne({ email })
+  const usersAlreadyExists = await Users.findOne({ email })
 
-  if (userAlreadyExists) throw new Error('mail is already registered')
-  if (password.lenght < 6) throw new Error('password must be 6 characters minium')
+  if (usersAlreadyExists) throw new Error('mailIsAlreadyRegistered')
+  if (password.lenght < 8) throw new Error('passwordMustBe8CharactersMinium')
 
   const hash = await bcrypt.hash(password, 8)
 
-  return Users.create({ ...newUserData, password: hash })
+  return Users.create({ ...newUsersData, password: hash })
 }
 
 async function login (email, password) {
   const user = await Users.findOne({ email })
-  if (!user) throw new Error('invalid data')
-
-  const isPasswordCorrect = await bcrypt.compare(password, user.password)
-  if (!isPasswordCorrect) throw new Error('invalid data')
+  console.log(user)
+  if (!user) throw new Error('invaliData')
+  const { password: secretWord } = user
+  console.log(secretWord)
+  const isPasswordCorrect = await bcrypt.compare(password, secretWord)
+  if (!isPasswordCorrect) throw new Error('invaliData')
 
   return jwt.sign({ id: user._id })
 }

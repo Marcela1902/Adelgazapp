@@ -37,7 +37,7 @@ router.post('/', async (request, response) => {
     response.status(400)
     response.json({
       success: false,
-      error: error.message
+      message: error.message
     })
   }
 })
