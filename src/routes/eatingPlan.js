@@ -4,7 +4,7 @@ const router = express.Router()
 const auth = require('../middlewares/auth')
 
 router.get('/:id', auth, (request, response, next) => {
-  console.log('middleware en GET/eatingPlan')
+  
   next()
 }, async (request, response) => {
   try {
@@ -25,7 +25,7 @@ router.get('/:id', auth, (request, response, next) => {
   }
 })
 
-router.post('/', async (request, response) => {
+/*router.post('/', async (request, response) => {
   try {
     const neweatingPlan = await eatingPlan.create(request.body)
     response.json({
@@ -83,5 +83,5 @@ router.patch('/:id', auth, async (request, response) => {
 
     })
   }
-})
+})*/
 module.exports = router

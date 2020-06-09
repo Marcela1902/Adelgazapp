@@ -1,29 +1,23 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const eatingPlanSchema = new mongoose.Schema({
-  eatingPlan: {
-    name: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      maxlength: 400
-    },
-    foodType: {
-      type: String,
-      required: true,
-      enum: ['desayuno', 'almuerzo', 'comida', 'cena']
-    },
-    user: {
-      type: Schema.Types.ObjectId,
-      ref: 'users'
-    },
-    dishes: {
-      type: Schema.Types.ObjectId,
-      ref: 'dishes'
-    }
 
-  }
+  id: Schema.Types.ObjectId,
+  name: String,
+  description: String,
+  enum:['desayuno, comida, cena'],
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'user' }]
 })
-module.exports = mongoose.model(' eatingPlan', eatingPlanSchema)
+  
+const dietsSchema = Schema({
+  name: { type: Schema.Types.ObjectId, ref: 'eatingPlan' },
+  eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
+});
+
+const Diets = mongoose.model(' diets', dietsSchema)
+const EatingPlan = mongoose.model(' eatingPlan', eatingPlanSchema)
+ 
+module.exports = {
+Diets,
+EatingPlan
+}

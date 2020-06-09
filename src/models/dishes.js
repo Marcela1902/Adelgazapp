@@ -1,23 +1,19 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const dishesSchema = new mongoose.Schema({
-  diets: {
+  _id: Schema.Types.ObjectId,
     name: {
       type: String,
       required: true
     },
-    ingredients: {
-      type: String,
-      required: true
-    },
-    grams: {
-      type: Number,
-      required: true
-    },
-    user: {
+  
+  
+    /*user: {
       type: Schema.Types.ObjectId,
       ref: 'users'
-    }
-  }
+    },*/
+    ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }], 
+    
 })
-module.exports = mongoose.model('diets', dishesSchema)
+
+module.exports = mongoose.model('dishes', dishesSchema)

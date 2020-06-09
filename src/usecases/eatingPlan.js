@@ -1,11 +1,20 @@
-const EatingPlan = require('../models/eatingPlan')
+const {EatingPlan,Diets} = require('../models/eatingPlan')
 
-function getAll (id) {
+
+function getAll () {
+  eatingPlan.
+  findOne({ name: 'String' }).
+  populate({
+    path: 'Diets',
+    
+    populate: { path: 'Diets' }
+  });
   return EatingPlan.find(id)
 }
 
-function create (eatingPlanData) {
-  return EatingPlan.create(eatingPlanData)
+async function create (eatingPlanData) {
+  
+ 
 }
 
 function deleteById (id) {

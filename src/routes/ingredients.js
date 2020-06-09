@@ -27,7 +27,9 @@ router.get('/:id', auth, (request, response, next) => {
 
 router.post('/', async (request, response) => {
   try {
-    const newIngredient = await ingredients.create(request.body)
+    
+    const body = request.body
+    const newIngredient = await ingredients.create(body)
     response.json({
       success: true,
       message: 'ingredient add',

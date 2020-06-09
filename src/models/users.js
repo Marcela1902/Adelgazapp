@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const usersSchema = new mongoose.Schema({
- 
+  
   personalData: {
+  
     name: {
       type: String,
       required: true
@@ -32,8 +33,7 @@ const usersSchema = new mongoose.Schema({
     }
   },
 
- 
- 
+
 
   complexion: {
     height: {
