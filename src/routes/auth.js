@@ -20,7 +20,8 @@ router.post('/login', async (request, response) => {
   } catch (error) {
     response.status(400)
     response.json({
-      success: false
+      success: false,
+      message: error.message
     })
   }
 })

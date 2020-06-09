@@ -6,18 +6,10 @@ const dishesSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  ingredients: {
-    type: String,
-    required: true
-  },
-  grams: {
-    type: Number,
-    required: true
-  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'users'
   }
 
 })
-module.exports = mongoose.model('diets', dishesSchema)
+module.exports = mongoose.model('dishes', dishesSchema)

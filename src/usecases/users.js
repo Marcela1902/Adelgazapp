@@ -27,7 +27,7 @@ async function signup (newUsersData) {
   const usersAlreadyExists = await Users.findOne({ email })
 
   if (usersAlreadyExists) throw new Error('mailIsAlreadyRegistered')
-  if (password.lenght < 12) throw new Error('passwordMustBe6CharactersMinium')
+  if (password.lenght < 8) throw new Error('passwordMustBe8CharactersMinium')
 
   const hash = await bcrypt.hash(password, 8)
 
@@ -36,9 +36,11 @@ async function signup (newUsersData) {
 
 async function login (email, password) {
   const user = await Users.findOne({ email })
-  if (!user) throw new Error('invalidData')
-
-  const isPasswordCorrect = await bcrypt.compare(password, user.password)
+  console.log(user)
+  if (!user) throw new Error('invaliData')
+  const { password: secretWord } = user
+  console.log(secretWord)
+  const isPasswordCorrect = await bcrypt.compare(password, secretWord)
   if (!isPasswordCorrect) throw new Error('invaliData')
 
   return jwt.sign({ id: user._id })
