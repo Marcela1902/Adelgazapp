@@ -2,38 +2,30 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const eatingPlanSchema = new mongoose.Schema({
 
+  _id: Schema.Types.ObjectId,
   name: {
     type: String,
     required: true
   },
-  description: {
-    type: String,
-    maxlength: 400
-  },
-  foodType: {
-    type: String,
-    required: true,
-    enum: ['desayuno', 'almuerzo', 'comida', 'cena']
-  },
-  diets: {
-    name: {
-      type: String,
-      required: true,
-      enum: ['dieta de volumen', 'dieta de tonificacion', 'dieta para adelgazar']
-    },
-    category: {
-      type: String,
-      required: true
-    }
-  },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'users'
-  },
-  dishes: {
-    type: Schema.Types.ObjectId,
-    ref: 'dishes'
-  }
+  description: String,
+  enum:['quemar grasa,  hacer musculo, cena'],
+  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
 
 })
-module.exports = mongoose.model(' eatingPlan', eatingPlanSchema)
+  
+const dietsSchema = Schema({
+  _id: Schema.Types.ObjectId,
+  name: {
+    type: String,
+    required: true
+  },
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'Dishes' }],
+});
+
+const Diets = mongoose.model(' diets', dietsSchema)
+const EatingPlan = mongoose.model(' eatingPlan', eatingPlanSchema)
+ 
+module.exports = {
+Diets,
+EatingPlan
+}
