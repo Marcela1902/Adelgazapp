@@ -1,4 +1,4 @@
-
+const mongoose = require('mongoose')
 const Ingredients = require('../models/ingredients')
 
 function getAll (id) {

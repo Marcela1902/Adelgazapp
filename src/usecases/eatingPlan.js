@@ -1,16 +1,12 @@
-const {EatingPlan,Diets} = require('../models/eatingPlan')
-
+const { EatingPlan } = require('../models/eatingPlan')
 
 function getAll () {
- 
   return EatingPlan.find({})
-  .populate('diets')
-  
+    .populate('diets')
 }
 
 async function create (eatingPlanData) {
-  return EatingPlan.create (eatingPlanData)
- 
+  return EatingPlan.create(eatingPlanData)
 }
 
 function deleteById (id) {
@@ -20,8 +16,6 @@ function deleteById (id) {
 function updateById (id, newEatingPlanData) {
   return EatingPlan.findByIdAndUpdate(id, newEatingPlanData)
 }
-
-
 
 module.exports = {
   getAll,
