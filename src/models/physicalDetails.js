@@ -1,13 +1,9 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema 
 const physicalDetailsSchema = new mongoose.Schema({
   age: {
     type: String,
     required: true
-  },
-  gender: {
-    type: String,
-    ref: 'users',
-    enum: ['hombre', 'mujer']
   },
   diameter: {
     type: Number,
@@ -23,39 +19,40 @@ const physicalDetailsSchema = new mongoose.Schema({
   },
   exercise: {
     type: String,
-    enum: ['poco activo', 'activo', 'muy activo'],
+    enum: ['pocoActivo', 'activo', 'muyActivo'],
     required: true
   },
   fatPercentage: {
     type: String,
-    enum: ['peso normal', 'delgadez aceptable', 'sobrepeso'],
+    enum: ['pesoNormal', 'delgadezAceptable', 'sobrePeso'],
     required: true
   },
   objective: {
     type: String,
-    enum: ['dieta de volumen', 'dieta de tonificacion', 'dieta para adelgazar'],
+    enum: ['dietaDeVolumen', 'dietaDeTonificacion', 'dietaParaAdelgazar'],
     required: true,
     ref: 'eatingPlan'
-  }
+  },
+  users: [{ type: Schema.Types.ObjectId, ref: 'users' }] 
 })
 
 const ectomorfo = {
   type: 'Ectomorfo',
   description: ' El cuerpo ectomorfo es delgado con extremidades largas' +
-    'y bajo peso normalmente.Suele tener un metabolismo acelerado.Este tipo de cuerpo no gana' +
+    ' y bajo peso normalmente.Suele tener un metabolismo acelerado.Este tipo de cuerpo no gana' +
     'músculos con facilidad si bien deben hacer diversos tipos de ejercicios para estar más fuertes al tener aspecto' +
     'frágil y hombros más bien pequeños.'
 }
 const mesomorfo = {
   type: 'Mesomorfo',
   description: 'Los mesomorfos son personas de contextura atlética que tienen sus músculos bastante bien desarrollados.' +
-    'Son muy fuertes y no deben de preocuparse por ganar o por perder peso pues su metabolismo funciona a la perfección.'
+    ' Son muy fuertes y no deben de preocuparse por ganar o por perder peso pues su metabolismo funciona a la perfección.'
 }
 const endomorfo = {
   type: 'Endomorfo',
   description: ' Endomorfo: El cuerpo endomorfo, es un cuerpo redondeado y  con una tendencia natural a acumular grasa.' +
-    'Su metabolismo es más lento: es decir, el endomorfo quema menos calorías en estado de reposo.' +
-    'En general tiene menor tolerancia al carbohidrato.'
+    ' Su metabolismo es más lento: es decir, el endomorfo quema menos calorías en estado de reposo.' +
+    ' En general tiene menor tolerancia al carbohidrato.'
 }
 
 physicalDetailsSchema.virtual('physiognomy').get(function () {
