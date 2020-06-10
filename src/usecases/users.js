@@ -1,16 +1,14 @@
 const bcrypt = require('bcrypt')
-
 const jwt = require('../lib/jwt')
-
 const Users = require('../models/users')
 
 function getAll (id) {
   return Users.find(id)
 }
 
-function create (userData) {
+/*function create (userData) {
   return Users.create(userData)
-}
+}*/
 
 function deleteById (id) {
   return Users.findByIdAndRemove(id)
@@ -18,20 +16,34 @@ function deleteById (id) {
 
 function updateById (id, newUserData) {
   return Users.findByIdAndUpdate(id, newUserData)
+
 }
 
-async function signup (newUsersData) {
-  const { email, password } = newUsersData
-  console.log(email, password)
+
+async function signup (newusersData) {
+  const { email, password } = newusersData
   if (!email) throw new Error('Email is required')
-  const usersAlreadyExists = await Users.findOne({ email })
+  const userAlreadyExists = await Users.findOne({ email })
+  if (userAlreadyExists) throw new Error('mail is already registered')
+  if (password.lenght < 6) throw new Error('password must be 6 characters minium')
+   const hash = await bcrypt.hash(password, 8)
 
-  if (usersAlreadyExists) throw new Error('mailIsAlreadyRegistered')
-  if (password.lenght < 8) throw new Error('passwordMustBe8CharactersMinium')
 
-  const hash = await bcrypt.hash(password, 8)
-
+  return Users.create({ ...newusersData, password: hash })
+}
+async function signup (userData) {
+  
+  const { name,lastName, email, password} = userData.personalData
+  if (!email) throw new Error('Email address is required')
+  if (!password) throw new Error('Password is required')
+  if (password.length < 8) throw new Error('Password must be at greater than 8 characters')
+  
+  const userAlreadyExists = await Users.findOne({ personalData:{email}})
+  console.log(userAlreadyExists)
+  if (userAlreadyExists) throw new Error('Email is already in use')
+  
   return Users.create({ ...newUsersData, password: hash })
+
 }
 
 async function login (email, password) {
@@ -42,6 +54,7 @@ async function login (email, password) {
   console.log(secretWord)
   const isPasswordCorrect = await bcrypt.compare(password, secretWord)
   if (!isPasswordCorrect) throw new Error('invaliData')
+
 
   return jwt.sign({ id: user._id })
 }
