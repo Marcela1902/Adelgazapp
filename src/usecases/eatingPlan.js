@@ -2,18 +2,14 @@ const {EatingPlan,Diets} = require('../models/eatingPlan')
 
 
 function getAll () {
-  eatingPlan.
-  findOne({ name: 'String' }).
-  populate({
-    path: 'Diets',
-    
-    populate: { path: 'Diets' }
-  });
-  return EatingPlan.find(id)
+ 
+  return EatingPlan.find({})
+  .populate('diets')
+  
 }
 
 async function create (eatingPlanData) {
-  
+  return EatingPlan.create (eatingPlanData)
  
 }
 
@@ -24,6 +20,8 @@ function deleteById (id) {
 function updateById (id, newEatingPlanData) {
   return EatingPlan.findByIdAndUpdate(id, newEatingPlanData)
 }
+
+
 
 module.exports = {
   getAll,

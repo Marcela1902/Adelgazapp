@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const dishesSchema = new mongoose.Schema({
+  
   _id: Schema.Types.ObjectId,
     name: {
       type: String,
@@ -12,7 +13,7 @@ const dishesSchema = new mongoose.Schema({
       type: Schema.Types.ObjectId,
       ref: 'users'
     },*/
-    ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }], 
+    ingredients: [{ type: Schema.Types.ObjectId, ref: 'Ingredients' }], 
     
 })
 

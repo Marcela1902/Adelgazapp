@@ -19,6 +19,6 @@ const ingredientsSchema = new mongoose.Schema({
       type: String
 
     },
-   // _id: Schema.Types.ObjectId
+    _id: Schema.Types.ObjectId
 })
-module.exports = mongoose.model('ingredients', ingredientsSchema)
+module.exports = mongoose.model('Ingredients', ingredientsSchema)

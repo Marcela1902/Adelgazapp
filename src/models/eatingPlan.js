@@ -2,16 +2,23 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const eatingPlanSchema = new mongoose.Schema({
 
-  id: Schema.Types.ObjectId,
-  name: String,
+  _id: Schema.Types.ObjectId,
+  name: {
+    type: String,
+    required: true
+  },
   description: String,
-  enum:['desayuno, comida, cena'],
-  dishes: [{ type: Schema.Types.ObjectId, ref: 'user' }]
+  enum:['quemar grasa,  hacer musculo, cena'],
+  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
 })
   
 const dietsSchema = Schema({
-  name: { type: Schema.Types.ObjectId, ref: 'eatingPlan' },
-  eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
+  _id: Schema.Types.ObjectId,
+  name: {
+    type: String,
+    required: true
+  },
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'Dishes' }],
 });
 
 const Diets = mongoose.model(' diets', dietsSchema)
