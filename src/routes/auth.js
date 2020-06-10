@@ -6,6 +6,7 @@ const router = express.Router()
 
 router.post('/login', async (request, response) => {
   try {
+    console.log('login')
     const { email, password } = request.body
     const token = await users.login(email, password)
 
@@ -19,8 +20,10 @@ router.post('/login', async (request, response) => {
   } catch (error) {
     response.status(400)
     response.json({
-      success: false
+      success: false,
+      message: error.message
     })
   }
 })
+
 module.exports = router

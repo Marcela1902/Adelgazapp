@@ -1,22 +1,23 @@
-const bcrypt = require('bcrypt')
-const jwt = require('../lib/jwt')
-const dishes = require('../models/dishes')
+const Dishes = require('../models/dishes')
 
 function getAll () {
-    return dishes.find({})
+    return Dishes.find({})
+    .populate('ingredients')
+    
   }
 
 
 function create (dishesData) {
-  return diets.create(dishesData)
+  dishesData._id = new mongoose.Types.ObjectId()
+  return Dishes.create(dishesData)
 }
 
 function deleteById (id) {
-    return dishes.findByIdAndRemove(id)
+    return Dishes.findByIdAndRemove(id)
   }
   
-  function updateById (id, newddishesData) {
-    return dishes.findByIdAndUpdate(id, newdishesData, { new: true })
+  function updateById (id, newDishesData) {
+    return Dishes.findByIdAndUpdate(id, newDishesData, { new: true })
   }
   
   module.exports = {
@@ -26,3 +27,4 @@ function deleteById (id) {
     updateById
   }
   
+

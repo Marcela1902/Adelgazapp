@@ -3,10 +3,8 @@ const dishes = require('../usecases/dishes')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response, next) => {
-  console.log('middleware en GET/dishes')
-  next()
-}, async (request, response) => {
+router.get ('/', async (request, response) => {
+
   try {
     const alldishes = await dishes.getAll()
     response.json({
