@@ -1,8 +1,14 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema 
+const Schema = mongoose.Schema
 const physicalDetailsSchema = new mongoose.Schema({
+  _id: Schema.Types.ObjectId,
   age: {
+    type: Number,
+    required: true
+  },
+  gender: {
     type: String,
+    enum: ['hombre', 'mujer'],
     required: true
   },
   diameter: {
@@ -30,10 +36,8 @@ const physicalDetailsSchema = new mongoose.Schema({
   objective: {
     type: String,
     enum: ['dietaDeVolumen', 'dietaDeTonificacion', 'dietaParaAdelgazar'],
-    required: true,
-    ref: 'eatingPlan'
-  },
-  users: [{ type: Schema.Types.ObjectId, ref: 'users' }] 
+    required: true
+  }
 })
 
 const ectomorfo = {
@@ -54,7 +58,6 @@ const endomorfo = {
     ' Su metabolismo es más lento: es decir, el endomorfo quema menos calorías en estado de reposo.' +
     ' En general tiene menor tolerancia al carbohidrato.'
 }
-
 physicalDetailsSchema.virtual('physiognomy').get(function () {
   if (this.diameter >= 15 && this.diameter <= 17.5) {
     return (ectomorfo)
@@ -66,4 +69,4 @@ physicalDetailsSchema.virtual('physiognomy').get(function () {
   return 'no reconocido'
 })
 
-module.exports = mongoose.model('physicalDetails', physicalDetailsSchema)
+module.exports = mongoose.model('PhysicalDetails', physicalDetailsSchema)

@@ -1,19 +1,15 @@
 const express = require('express')
 const physicalDetails = require('../usecases/physicalDetails')
 const router = express.Router()
-const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response, next) => {
-  console.log('middleware en GET/ingredients')
-  next()
-}, async (request, response) => {
+router.get('/', async (request, response) => {
   try {
     const allPhysicalDetails = await physicalDetails.getAll()
     response.json({
       success: true,
       message: '',
       data: {
-        ingredients: allPhysicalDetails
+        physicalDetails: allPhysicalDetails
       }
     })
   } catch (error) {
@@ -25,14 +21,16 @@ router.get('/:id', auth, (request, response, next) => {
   }
 })
 
-router.post('/', async (request, response) => {
+router.post('/:idUser', async (request, response) => {
+  const { idUser } = request.params
+  const body = request.body
   try {
-    const newPhysicalDetails = await physicalDetails.create(request.body)
+    const newPhysicalDetails = await physicalDetails.create(idUser, body)
     response.json({
       success: true,
       message: '',
       data: {
-        physicalDetails: newPhysicalDetails.toObject({ virtuals: true })
+        physicalDetails: newPhysicalDetails
       }
     })
   } catch (error) {
@@ -44,7 +42,7 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.delete('/:id', auth, async (request, response) => {
+router.delete('/:id', async (request, response) => {
   try {
     const { id } = request.params
     const physicalDetailsDeleted = await physicalDetails.deleteById(id)
@@ -64,7 +62,7 @@ router.delete('/:id', auth, async (request, response) => {
   }
 })
 
-router.patch('/:id', auth, async (request, response) => {
+router.patch('/:id', async (request, response) => {
   try {
     const { id } = request.params
     const physicalDetailsUpdate = await physicalDetails.updateById(id, request.body)

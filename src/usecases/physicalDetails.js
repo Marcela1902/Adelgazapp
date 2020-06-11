@@ -1,11 +1,26 @@
+const mongoose = require('mongoose')
+
 const PhysicalDetails = require('../models/physicalDetails')
+const Users = require('../models/users')
 
 function getAll () {
   return PhysicalDetails.find({})
-    .populate('users')
 }
-function create (physicalDetailsData) {
-  return PhysicalDetails.create(physicalDetailsData)
+ async function create (idUser,physicalDetailsData) {
+  physicalDetailsData._id = new mongoose.Types.ObjectId()
+  let physicalDetails = await PhysicalDetails.create(physicalDetailsData)
+  const { _id } = physicalDetails
+  const detail = await Users.findByIdAndUpdate(idUser, {
+    $set: {
+      idTest: _id
+    }
+
+  })
+  console.log(detail)
+  console.log (physicalDetails)
+  console.log (idUser)
+  return (detail)
+ 
 }
 
 function deleteById (id) {
