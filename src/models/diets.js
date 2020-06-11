@@ -11,6 +11,4 @@ const dietsSchema = new mongoose.Schema({
 
 })
 const Diets = mongoose.model('diets', dietsSchema)
-module.exports = {
-  Diets
-}
+module.exports = Diets

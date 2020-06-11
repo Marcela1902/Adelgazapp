@@ -1,9 +1,14 @@
 const mongoose = require('mongoose')
-const { Diets } = require('../models/diets')
+const Diets = require('../models/diets')
 
 function getAll () {
   return Diets.find({})
-    .populate({ path: 'dishes', select: 'ingredients' })
+    .populate({
+      path: 'dishes',
+      populate: {
+        path: 'ingredients'
+      }
+    })
 }
 
 async function create (dietsData) {
