@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const usersSchema = new mongoose.Schema({
+  // id: Schema.Types.ObjectId,
   name: {
     type: String,
     required: true
@@ -22,7 +23,27 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8
   },
-
+  street: {
+    type: String
+  },
+  CP: {
+    type: Number
+  },
+  numberExt: {
+    type: Number
+  },
+  numberInt: {
+    type: Number
+  },
+  colonia: {
+    type: String
+  },
+  city: {
+    type: String
+  },
+  reference: {
+    type: String
+  },
   idTest: {
     type: Schema.Types.ObjectId,
     ref: 'physicalDetails'
