@@ -3,10 +3,7 @@ const ingredients = require('../usecases/ingredients')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response, next) => {
-  console.log('middleware en GET/ingredients')
-  next()
-}, async (request, response) => {
+router.get('/', async (request, response) => {
   try {
     const allIngredients = await ingredients.getAll()
     response.json({
@@ -27,7 +24,9 @@ router.get('/:id', auth, (request, response, next) => {
 
 router.post('/', async (request, response) => {
   try {
-    const newIngredient = await ingredients.create(request.body)
+    
+    const body = request.body
+    const newIngredient = await ingredients.create(body)
     response.json({
       success: true,
       message: 'ingredient add',

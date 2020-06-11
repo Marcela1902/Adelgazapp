@@ -5,6 +5,7 @@ const ingredientsSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
+
   },
   grams: {
     type: Number,
@@ -18,18 +19,6 @@ const ingredientsSchema = new mongoose.Schema({
     type: String
 
   },
-  // user: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'users'
-  // },
-  dishes: {
-    type: Schema.Types.ObjectId,
-    ref: 'dishes'
-  }
-  // eatingPlan: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'eatingPlan'
-  // }
-
+  _id: Schema.Types.ObjectId
 })
-module.exports = mongoose.model('ingredients', ingredientsSchema)
+module.exports = mongoose.model('Ingredients', ingredientsSchema)

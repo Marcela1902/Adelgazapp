@@ -1,10 +1,11 @@
-const EatingPlan = require('../models/eatingPlan')
+const { EatingPlan } = require('../models/eatingPlan')
 
-function getAll (id) {
-  return EatingPlan.find(id)
+function getAll () {
+  return EatingPlan.find({})
+    .populate('diets')
 }
 
-function create (eatingPlanData) {
+async function create (eatingPlanData) {
   return EatingPlan.create(eatingPlanData)
 }
 

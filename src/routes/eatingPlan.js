@@ -1,12 +1,14 @@
 const express = require('express')
-const eatingPlan = require('../usecases/eatingPlan')
+const {eatingPlan} = require('../usecases/eatingPlan')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
-router.get('/:id', auth, (request, response, next) => {
-  console.log('middleware en GET/eatingPlan')
-  next()
-}, async (request, response) => {
+
+
+
+//Routes de EatinPlan
+
+router.get('/', async (request, response) => {
   try {
     const alleatingPlan = await eatingPlan.getAll()
     response.json({
