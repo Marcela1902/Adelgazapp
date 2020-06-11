@@ -1,12 +1,7 @@
 const express = require('express')
-const {eatingPlan} = require('../usecases/eatingPlan')
+const eatingPlan = require('../usecases/eatingPlan')
 const router = express.Router()
-const auth = require('../middlewares/auth')
-
-
-
-
-//Routes de EatinPlan
+// const auth = require('../middlewares/auth')
 
 router.get('/', async (request, response) => {
   try {
@@ -29,6 +24,7 @@ router.get('/', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
+    console.log(eatingPlan)
     const neweatingPlan = await eatingPlan.create(request.body)
     response.json({
       success: true,
@@ -46,44 +42,4 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.delete('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const eatingPlanDeleted = await eatingPlan.deleteById(id)
-    response.json({
-      succes: true,
-      message: `eatingPlan with id ${id} deleted`,
-      data: {
-        eatingPlan: eatingPlanDeleted
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
-router.patch('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const eatingPlanUpdate = await eatingPlan.updateById(id, request.body)
-    response.json({
-      success: true,
-      message: `eatingPlan with id ${id} updated`,
-      data: {
-        eatingPlan: eatingPlanUpdate
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-
-    })
-  }
-})
 module.exports = router

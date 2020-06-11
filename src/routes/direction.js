@@ -1,16 +1,16 @@
 const express = require('express')
-const dishes = require('../usecases/dishes')
+const direction = require('../usecases/direction')
 const router = express.Router()
 // const auth = require('../middlewares/auth')
 
 router.get('/', async (request, response) => {
   try {
-    const alldishes = await dishes.getAll()
+    const allDirection = await direction.getAll()
     response.json({
       success: true,
-      message: 'all dishes',
+      message: 'all directions',
       data: {
-        dishes: alldishes
+        dishes: allDirection
       }
     })
   } catch (error) {
@@ -24,12 +24,12 @@ router.get('/', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    const newdishes = await dishes.create(request.body)
+    const newDirection = await direction.create(request.body)
     response.json({
       success: true,
-      message: 'dishes add',
+      message: 'direction add',
       data: {
-        dishes: newdishes
+        dishes: newDirection
       }
     })
   } catch (error) {
