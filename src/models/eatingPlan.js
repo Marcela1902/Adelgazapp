@@ -34,6 +34,5 @@ const eatingPlanSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'dishes'
   }
-
 })
 module.exports = mongoose.model(' eatingPlan', eatingPlanSchema)

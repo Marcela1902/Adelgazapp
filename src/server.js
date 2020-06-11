@@ -7,6 +7,7 @@ const authRouter = require('./routes/auth')
 const dishesRouter = require('./routes/dishes')
 const eatingPlanRouter = require('./routes/eatingPlan')
 const ingredientsRouter = require('./routes/ingredients')
+const physicalDetails = require('./routes/physicalDetails')
 
 const app = express()
 
@@ -16,6 +17,7 @@ app.use(cors())
 app.use('/dishes', dishesRouter)
 app.use('/eatingPlan', eatingPlanRouter)
 app.use('/ingredients', ingredientsRouter)
+app.use('/physicalDetails', physicalDetails)
 
 app.use((request, response, next) => {
   console.log(`>[${request.method}] ${request.url} body:${JSON.stringify(request.body)}`)

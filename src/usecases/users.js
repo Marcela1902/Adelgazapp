@@ -1,14 +1,18 @@
 const bcrypt = require('bcrypt')
 
+const mongoose = require('mongoose')
+
 const jwt = require('../lib/jwt')
 
 const Users = require('../models/users')
 
-function getAll (id) {
-  return Users.find(id)
+function getAll () {
+  return Users.find({})
+    .populate('physicalDetails')
 }
 
 function create (userData) {
+  userData._id = new mongoose.Type.ObjectId()
   return Users.create(userData)
 }
 
