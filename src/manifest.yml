@@ -1,0 +1,5 @@
+applications:
+- name: fitU
+  memory: 64M
+  stack: cflinuxfs3
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
