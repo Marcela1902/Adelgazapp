@@ -1,7 +1,7 @@
 const express = require('express')
 const ingredients = require('../usecases/ingredients')
 const router = express.Router()
-const auth = require('../middlewares/auth')
+// const auth = require('../middlewares/auth')
 
 router.get('/', async (request, response) => {
   try {
@@ -24,7 +24,6 @@ router.get('/', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    
     const body = request.body
     const newIngredient = await ingredients.create(body)
     response.json({
@@ -43,44 +42,4 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.delete('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const ingredientDeleted = await ingredients.deleteById(id)
-    response.json({
-      succes: true,
-      message: `ingredient with id ${id} deleted`,
-      data: {
-        ingredient: ingredientDeleted
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
-router.patch('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const ingredientUpdate = await ingredients.updateById(id, request.body)
-    response.json({
-      success: true,
-      message: `ingredient with id ${id} updated`,
-      data: {
-        ingredient: ingredientUpdate
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-
-    })
-  }
-})
 module.exports = router

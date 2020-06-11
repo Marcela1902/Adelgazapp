@@ -12,14 +12,6 @@ function create (userData) {
   return Users.create(userData)
 }
 
-function deleteById (id) {
-  return Users.findByIdAndRemove(id)
-}
-
-function updateById (id, newUserData) {
-  return Users.findByIdAndUpdate(id, newUserData)
-}
-
 async function signup (newUsersData) {
   const { email, password } = newUsersData
   console.log(email, password)
@@ -49,8 +41,6 @@ async function login (email, password) {
 module.exports = {
   getAll,
   create,
-  deleteById,
-  updateById,
   signup,
   login
 }

@@ -23,7 +23,7 @@ router.get('/', auth, (request, response, next) => {
   }
 })
 
-/*router.post('/', async (request, response) => {
+router.post('/', async (request, response) => {
   try {
     const newUser = await users.create(request.body)
     response.json({
@@ -38,47 +38,6 @@ router.get('/', auth, (request, response, next) => {
     response.json({
       success: false,
       message: error.message
-    })
-  }
-})*/
-
-router.delete('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const userDeleted = await users.deleteById(id)
-    response.json({
-      success: true,
-      message: `user with id ${id} deleted}`,
-      data: {
-        user: userDeleted
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
-router.patch('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const userUpDated = await users.updateById(id, request.body)
-    response.json({
-      success: true,
-      message: `user with id ${id} updated`,
-      data: {
-        user: userUpDated
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-
     })
   }
 })

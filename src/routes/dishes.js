@@ -1,10 +1,9 @@
 const express = require('express')
 const dishes = require('../usecases/dishes')
 const router = express.Router()
-const auth = require('../middlewares/auth')
+// const auth = require('../middlewares/auth')
 
-router.get ('/', async (request, response) => {
-
+router.get('/', async (request, response) => {
   try {
     const alldishes = await dishes.getAll()
     response.json({
@@ -42,44 +41,4 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.delete('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const dishesDeleted = await dishes.deleteById(id)
-    response.json({
-      succes: true,
-      message: `dishes with id ${id} deleted`,
-      data: {
-        dishes: dishesDeleted
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
-router.patch('/:id', auth, async (request, response) => {
-  try {
-    const { id } = request.params
-    const dishesUpdate = await dishes.updateById(id, request.body)
-    response.json({
-      success: true,
-      message: `dishes with id ${id} updated`,
-      data: {
-        dishes: dishesUpdate
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-
-    })
-  }
-})
 module.exports = router

@@ -1,25 +1,31 @@
+const mongoose = require('mongoose')
 const { EatingPlan } = require('../models/eatingPlan')
 
-function getAll () {
-  return EatingPlan.find({})
-    .populate('diets')
-}
+// este el end point en el que seguimos trabajando
 
-async function create (eatingPlanData) {
+// function getAll() {
+//   return EatingPlan.find({})
+//     .populate({
+//       path: 'diets',
+//       populate: [{
+//         path: 'dishes',
+//         model: 'dishes',
+//         populate: [{
+//           path: 'Ingredients',
+//           model: '',
+//           select: 'firstname lastname'
+//         }]
+//       }]
+//     })
+// }
+
+function create (eatingPlanData) {
+  eatingPlanData._id = new mongoose.Types.ObjectId()
   return EatingPlan.create(eatingPlanData)
 }
 
-function deleteById (id) {
-  return EatingPlan.findByIdAndRemove(id)
-}
-
-function updateById (id, newEatingPlanData) {
-  return EatingPlan.findByIdAndUpdate(id, newEatingPlanData)
-}
-
 module.exports = {
-  getAll,
-  create,
-  deleteById,
-  updateById
+  // getAll,
+  create
+
 }
