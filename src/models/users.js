@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 const usersSchema = new mongoose.Schema({
+  //id: Schema.Types.ObjectId,
   name: {
     type: String,
     required: true
@@ -21,21 +23,6 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8
   },
-  gender: {
-    type: String
-  },
-
-  height: {
-    type: Number
-  },
-  IMC: {
-    type: Number
-  },
-  wristDiameter: {
-    type: Number,
-    minlength: 2
-  },
-
   street: {
     type: String
   },
@@ -56,8 +43,10 @@ const usersSchema = new mongoose.Schema({
   },
   reference: {
     type: String
-
+  },
+  idTest: {
+    type: Schema.Types.ObjectId,
+    ref: 'physicalDetails'
   }
-
 })
 module.exports = mongoose.model('users', usersSchema)
