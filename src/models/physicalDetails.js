@@ -42,6 +42,7 @@ const physicalDetailsSchema = new mongoose.Schema({
 
 const ectomorfo = {
   type: 'Ectomorfo',
+  image: String,
   description: ' El cuerpo ectomorfo es delgado con extremidades largas' +
     ' y bajo peso normalmente.Suele tener un metabolismo acelerado.Este tipo de cuerpo no gana' +
     'músculos con facilidad si bien deben hacer diversos tipos de ejercicios para estar más fuertes al tener aspecto' +
@@ -49,11 +50,13 @@ const ectomorfo = {
 }
 const mesomorfo = {
   type: 'Mesomorfo',
+  image: String,
   description: 'Los mesomorfos son personas de contextura atlética que tienen sus músculos bastante bien desarrollados.' +
     ' Son muy fuertes y no deben de preocuparse por ganar o por perder peso pues su metabolismo funciona a la perfección.'
 }
 const endomorfo = {
   type: 'Endomorfo',
+  image: String,
   description: ' Endomorfo: El cuerpo endomorfo, es un cuerpo redondeado y  con una tendencia natural a acumular grasa.' +
     ' Su metabolismo es más lento: es decir, el endomorfo quema menos calorías en estado de reposo.' +
     ' En general tiene menor tolerancia al carbohidrato.'

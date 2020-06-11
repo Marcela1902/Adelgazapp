@@ -1,10 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const usersSchema = new mongoose.Schema({
-<<<<<<< HEAD
-  //_id: Schema.Types.ObjectId,
-=======
->>>>>>> development
+  //id: Schema.Types.ObjectId,
   name: {
     type: String,
     required: true
