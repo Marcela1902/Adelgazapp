@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
-const EatingPlan= require ('../models/eatingPlan')
+const EatingPlan = require('../models/eatingPlan')
 const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
 
-function getAll () {
+function getAll() {
   return PhysicalDetails.find({})
 }
 
-async function create (idUser, physicalDetailsData) {
+async function create(idUser, physicalDetailsData) {
   const user = await Users.findById(idUser)
   if (user.idTest) throw new Error('El test ya fue relizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
@@ -28,11 +28,15 @@ async function create (idUser, physicalDetailsData) {
   return (detail) */
 }
 
-function deleteById (id) {
+function findById (idTest) {
+  return PhysicalDetails.findById(idTest)
+}
+
+function deleteById(id) {
   return PhysicalDetails.findByIdAndRemove(id)
 }
 
-function updateById (id, newPhysicalDetailsData) {
+function updateById(id, newPhysicalDetailsData) {
   return PhysicalDetails.findByIdAndUpdate(id, newPhysicalDetailsData, { new: true })
 }
 
@@ -40,5 +44,6 @@ module.exports = {
   getAll,
   create,
   deleteById,
-  updateById
+  updateById,
+  findById
 }
