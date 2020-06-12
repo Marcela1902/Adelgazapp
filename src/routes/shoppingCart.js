@@ -1,22 +1,16 @@
 const express = require('express')
-const eatingPlan = require('../usecases/eatingPlan')
+const shoppingCart = require('../usecases/shoppingCart')
 const router = express.Router()
 // const auth = require('../middlewares/auth')
 
 router.get('/', async (request, response) => {
   try {
-    var eatingPlans
-    const { objective } = request.params
-    if (objective) {
-      eatingPlans = await eatingPlan.filterByObjective(objective)
-    } else {
-      eatingPlans = await eatingPlan.getAll()
-    }
+    const shopping = await shoppingCart.getAll()
     response.json({
       success: true,
-      message: 'all eatingPlan',
+      message: 'all shoppingCart',
       data: {
-        eatingPlan: eatingPlans
+        shoppingCart: shopping
       }
     })
   } catch (error) {
@@ -30,13 +24,13 @@ router.get('/', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    console.log(eatingPlan)
-    const neweatingPlan = await eatingPlan.create(request.body)
+    console.log(shoppingCart)
+    const newshoppingCart = await shoppingCart.create(request.body)
     response.json({
       success: true,
-      message: 'eatingPlan add',
+      message: 'shopping add',
       data: {
-        eatingPlan: neweatingPlan
+        shoppingCart: newshoppingCart
       }
     })
   } catch (error) {
