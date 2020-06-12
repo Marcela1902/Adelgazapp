@@ -36,7 +36,7 @@ const physicalDetailsSchema = new mongoose.Schema({
     enum: ['adelgazar', 'volumen', 'tonificar'],
     required: true
   }
-  /* _id: Schema.Types.ObjectId */
+  /*_id: Schema.Types.ObjectId */
 })
 const ectomorfo = {
   type: 'Ectomorfo',

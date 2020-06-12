@@ -6,13 +6,19 @@ const Users = require('../models/users')
 function getAll () {
   return PhysicalDetails.find({})
 }
+
 async function create (idUser, physicalDetailsData) {
-  /* physicalDetailsData._id = new mongoose.Types.ObjectId() */
+  console.log(idUser)
+  const users = Users.findById(idUser)
+  console.log(users)
+  const { idTest: test } = users
+  if (test) throw new Error('El test ya fue relizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
-  const { _id: idTest, physiognomy, objective } = physicalDetails
+  const { _id: idTest, physiognomy } = physicalDetails
   await Users.findByIdAndUpdate(idUser, { idTest })
-  // const eatingsPlan = EatingPlan.find({ objective })
-  return { physiognomy}
+
+  /* const eatingsPlan = EatingPlan.find({ objective }) */
+  return { physiognomy }
 
   /* const detail = await Users.findByIdAndUpdate(idUser, {
     $set: {
