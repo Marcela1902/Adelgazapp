@@ -11,8 +11,8 @@ async function create (idUser, physicalDetailsData) {
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id: idTest, physiognomy, objective } = physicalDetails
   await Users.findByIdAndUpdate(idUser, { idTest })
-  const eatingsPlan = EatingPlan.find({ objective })
-  return { physiognomy, eatingsPlan }
+  // const eatingsPlan = EatingPlan.find({ objective })
+  return { physiognomy}
 
   /* const detail = await Users.findByIdAndUpdate(idUser, {
     $set: {

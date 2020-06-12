@@ -34,13 +34,13 @@ async function login (email, password) {
   const user = await Users.findOne({ email })
   console.log(user)
   if (!user) throw new Error('invaliData')
-  const { password: secretWord, name, lastName, _id } = user
+  const { password: secretWord, name, lastName, _id, idTest } = user
   console.log(secretWord)
   const isPasswordCorrect = await bcrypt.compare(password, secretWord)
   if (!isPasswordCorrect) throw new Error('invaliData')
   const token = jwt.sign({ id: user._id })
 
-  return { token, name, lastName, _id }
+  return { token, name, lastName, _id, idTest }
 }
 
 module.exports = {
