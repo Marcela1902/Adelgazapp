@@ -14,7 +14,7 @@ router.post('/login', async (request, response) => {
       success: true,
       message: 'loged in',
       data: {
-        token
+        ...token
       }
     })
   } catch (error) {
