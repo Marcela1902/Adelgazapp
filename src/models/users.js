@@ -47,6 +47,11 @@ const usersSchema = new mongoose.Schema({
   idTest: {
     type: Schema.Types.ObjectId,
     ref: 'physicalDetails'
+  },
+  eatingPlan: [{
+    type: Schema.Types.ObjectId,
+    ref: 'eatingPlan'
   }
+  ]
 })
 module.exports = mongoose.model('users', usersSchema)
