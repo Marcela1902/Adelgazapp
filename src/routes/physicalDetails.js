@@ -30,7 +30,7 @@ router.post('/:idUser', async (request, response) => {
       success: true,
       message: '',
       data: {
-        physicalDetails: newPhysicalDetails
+        userPhysicalDetail: newPhysicalDetails
       }
     })
   } catch (error) {

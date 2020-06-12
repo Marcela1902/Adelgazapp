@@ -27,8 +27,13 @@ const usersSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'physicalDetails'
   },
-  eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
-  direction: [{ type: Schema.Types.ObjectId, ref: 'direction' }]
+  // eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
+  direction: [{ type: Schema.Types.ObjectId, ref: 'direction' }],
+  eatingPlan: [{
+    type: Schema.Types.ObjectId,
+    ref: 'eatingPlan'
+  }
+  ]
 })
 
 module.exports = mongoose.model('users', usersSchema)
