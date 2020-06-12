@@ -21,10 +21,9 @@ router.get('/', async (request, response) => {
   }
 })
 
-
 router.get('/idTest', async (request, response) => {
   try {
-    const allPhysicalDetails = await physicalDetails.findById()
+    const allPhysicalDetails = await physicalDetails.findById(idTest)
     response.json({
       success: true,
       message: '',

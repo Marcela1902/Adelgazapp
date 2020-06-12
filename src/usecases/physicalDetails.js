@@ -8,11 +8,8 @@ function getAll () {
 }
 
 async function create (idUser, physicalDetailsData) {
-  console.log(idUser)
-  const users = Users.findById(idUser)
-  console.log(users)
-  const { idTest: test } = users
-  if (test) throw new Error('El test ya fue relizado')
+  const user = await Users.findById(idUser)
+  if (user.idTest) throw new Error('El test ya fue relizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id: idTest, physiognomy } = physicalDetails
   await Users.findByIdAndUpdate(idUser, { idTest })
