@@ -6,9 +6,9 @@ const Users = require('../models/users')
 function getAll () {
   return PhysicalDetails.find({})
 }
- async function create (idUser,physicalDetailsData) {
+async function create (idUser, physicalDetailsData) {
   physicalDetailsData._id = new mongoose.Types.ObjectId()
-  let physicalDetails = await PhysicalDetails.create(physicalDetailsData)
+  const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id } = physicalDetails
   const detail = await Users.findByIdAndUpdate(idUser, {
     $set: {
@@ -17,10 +17,9 @@ function getAll () {
 
   })
   console.log(detail)
-  console.log (physicalDetails)
-  console.log (idUser)
+  console.log(physicalDetails)
+  console.log(idUser)
   return (detail)
- 
 }
 
 function deleteById (id) {

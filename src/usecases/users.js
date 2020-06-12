@@ -8,7 +8,15 @@ const Users = require('../models/users')
 
 function getAll () {
   return Users.find({})
-    .populate('physicalDetails')
+    .populate({
+      path: 'physicalDetails',
+      populate: {
+        path: 'eatingPlan',
+        populate: {
+          path: 'direction'
+        }
+      }
+    })
 }
 
 function create (userData) {
@@ -41,7 +49,6 @@ async function login (email, password) {
 
   return jwt.sign({ id: user._id })
 }
-
 module.exports = {
   getAll,
   create,
