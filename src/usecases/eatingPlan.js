@@ -14,6 +14,21 @@ function getAll () {
     })
 }
 
+function filterByObjective (objective) {
+  return EatingPlan.find({ objective})
+    .populate({
+      path: 'diets',
+      populate: {
+        path: 'dishes',
+        populate: {
+          path: 'ingredients'
+        }
+      }
+    })
+}
+
+ 
+
 function create (eatingPlanData) {
   eatingPlanData._id = new mongoose.Types.ObjectId()
   return EatingPlan.create(eatingPlanData)
@@ -21,6 +36,7 @@ function create (eatingPlanData) {
 
 module.exports = {
   getAll,
-  create
+  create,
+  filterByObjective
 
 }

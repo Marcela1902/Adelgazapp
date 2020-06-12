@@ -33,7 +33,11 @@ const usersSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'eatingPlan'
   }
-  ]
+  ],
+  idBuy: [{
+    type: Schema.Types.ObjectId,
+    ref: 'shoppingCart'
+  }]
 })
 
 module.exports = mongoose.model('users', usersSchema)

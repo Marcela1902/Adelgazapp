@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
+<<<<<<< HEAD
 // const Schema = mongoose.Schema
+=======
+>>>>>>> development
 const physicalDetailsSchema = new mongoose.Schema({
   age: {
     type: Number,
@@ -34,10 +37,10 @@ const physicalDetailsSchema = new mongoose.Schema({
   },
   objective: {
     type: String,
-    enum: ['adelgazar,  volumen, tonificar'],
+    enum: ['adelgazar', 'volumen', 'tonificar'],
     required: true
   }
-  /* _id: Schema.Types.ObjectId */
+  /*_id: Schema.Types.ObjectId */
 })
 const ectomorfo = {
   type: 'Ectomorfo',
