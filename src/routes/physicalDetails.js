@@ -21,6 +21,28 @@ router.get('/', async (request, response) => {
   }
 })
 
+
+router.get('/idTest', async (request, response) => {
+  try {
+    const allPhysicalDetails = await physicalDetails.findById()
+    response.json({
+      success: true,
+      message: '',
+      data: {
+        physicalDetails: allPhysicalDetails
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
+
+
 router.post('/:idUser', async (request, response) => {
   const { idUser } = request.params
   const body = request.body
