@@ -9,6 +9,7 @@ const eatingPlanRouter = require('./routes/eatingPlan')
 const ingredientsRouter = require('./routes/ingredients')
 const physicalDetails = require('./routes/physicalDetails')
 const dietsRouter = require('./routes/diets')
+const shoppingCart = require('./routes/shoppingCart')
 
 const app = express()
 
@@ -20,7 +21,8 @@ app.use('/dishes', dishesRouter)
 app.use('/eatingPlan', eatingPlanRouter)
 app.use('/ingredients', ingredientsRouter)
 app.use('/physicalDetails', physicalDetails)
-app.use('/diets',dietsRouter)
+app.use('/diets', dietsRouter)
+app.use('/shoppingCart', shoppingCart)
 
 app.use((request, response, next) => {
   console.log(`>[${request.method}] ${request.url} body:${JSON.stringify(request.body)}`)
