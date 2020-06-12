@@ -21,14 +21,16 @@ router.get('/', async (request, response) => {
   }
 })
 
-router.get('/idTest', async (request, response) => {
+router.get('/:idTest', async (request, response) => {
+  const { idTest } = request.params
   try {
-    const allPhysicalDetails = await physicalDetails.findById(idTest)
+    const newPhysicalDetails = await physicalDetails.findById(idTest)
+    const test = newPhysicalDetails.toObject({ virtuals: true })
     response.json({
       success: true,
       message: '',
       data: {
-        physicalDetails: allPhysicalDetails
+        physicalDetails: test
       }
     })
   } catch (error) {
@@ -39,8 +41,6 @@ router.get('/idTest', async (request, response) => {
     })
   }
 })
-
-
 
 router.post('/:idUser', async (request, response) => {
   const { idUser } = request.params
@@ -63,44 +63,4 @@ router.post('/:idUser', async (request, response) => {
   }
 })
 
-router.delete('/:id', async (request, response) => {
-  try {
-    const { id } = request.params
-    const physicalDetailsDeleted = await physicalDetails.deleteById(id)
-    response.json({
-      success: true,
-      message: `${id} `,
-      data: {
-        ingredient: physicalDetailsDeleted
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
-router.patch('/:id', async (request, response) => {
-  try {
-    const { id } = request.params
-    const physicalDetailsUpdate = await physicalDetails.updateById(id, request.body)
-    response.json({
-      success: true,
-      message: ` ${id} `,
-      data: {
-        ingredient: physicalDetailsUpdate
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-
-    })
-  }
-})
 module.exports = router

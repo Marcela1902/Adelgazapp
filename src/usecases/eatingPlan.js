@@ -27,7 +27,6 @@ function filterByObjective (objective) {
     })
 }
 
- 
 
 function create (eatingPlanData) {
   eatingPlanData._id = new mongoose.Types.ObjectId()
