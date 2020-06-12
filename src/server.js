@@ -16,7 +16,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-
 app.use('/dishes', dishesRouter)
 app.use('/eatingPlan', eatingPlanRouter)
 app.use('/ingredients', ingredientsRouter)
