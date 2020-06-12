@@ -8,10 +8,6 @@ const dishesSchema = new mongoose.Schema({
     required: true
   },
 
-  // user: {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'users'
-  //   },
   ingredients: [{ type: Schema.Types.ObjectId, ref: 'Ingredients' }]
 
 })
