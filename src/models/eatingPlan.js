@@ -8,7 +8,11 @@ const eatingPlanSchema = new mongoose.Schema({
     required: true
   },
   description: String,
-  enum: ['adelgazar,  volumen, tonificar'],
+  /* objective: {
+    type: String,
+    enum: ['adelgazar,  volumen, tonificar'],
+    required: true
+  }, */
   diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
 
 })

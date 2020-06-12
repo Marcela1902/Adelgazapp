@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const physicalDetailsSchema = new mongoose.Schema({
-  _id: Schema.Types.ObjectId,
   age: {
     type: Number,
     required: true
@@ -35,17 +34,17 @@ const physicalDetailsSchema = new mongoose.Schema({
   },
   objective: {
     type: String,
-    enum: ['dietaDeVolumen', 'dietaDeTonificacion', 'dietaParaAdelgazar'],
+    enum: ['adelgazar,  volumen, tonificar'],
     required: true
   }
+  /* _id: Schema.Types.ObjectId */
 })
-
 const ectomorfo = {
   type: 'Ectomorfo',
   image: String,
   description: ' El cuerpo ectomorfo es delgado con extremidades largas' +
     ' y bajo peso normalmente.Suele tener un metabolismo acelerado.Este tipo de cuerpo no gana' +
-    'músculos con facilidad si bien deben hacer diversos tipos de ejercicios para estar más fuertes al tener aspecto' +
+    'músculos con facilidad si bien deben hacer diversos tipos de ejercicios para estar más fuertes al tener aspecto' +
     'frágil y hombros más bien pequeños.'
 }
 const mesomorfo = {
@@ -57,7 +56,7 @@ const mesomorfo = {
 const endomorfo = {
   type: 'Endomorfo',
   image: String,
-  description: ' Endomorfo: El cuerpo endomorfo, es un cuerpo redondeado y  con una tendencia natural a acumular grasa.' +
+  description: 'El cuerpo endomorfo, es un cuerpo redondeado y  con una tendencia natural a acumular grasa.' +
     ' Su metabolismo es más lento: es decir, el endomorfo quema menos calorías en estado de reposo.' +
     ' En general tiene menor tolerancia al carbohidrato.'
 }
@@ -71,5 +70,4 @@ physicalDetailsSchema.virtual('physiognomy').get(function () {
   }
   return 'no reconocido'
 })
-
 module.exports = mongoose.model('PhysicalDetails', physicalDetailsSchema)
