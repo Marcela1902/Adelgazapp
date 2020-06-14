@@ -48,7 +48,7 @@ const usersSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'physicalDetails'
   },
-  eatingPlan: [{
+  eatingPlans: [{
     type: Schema.Types.ObjectId,
     ref: 'eatingPlan'
   }
