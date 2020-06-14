@@ -14,7 +14,7 @@ async function create (idUser, physicalDetailsData) {
   const { _id: idTest, physiognomy, objective } = physicalDetails
   await Users.findByIdAndUpdate(idUser, { idTest })
   const eatingPlans = EatingPlan.find({ objective }).limit(1)
-  /* if (!eatingPlans) throw new Error('No hay planes con este objetivo: ' + objective)
+  if (!eatingPlans) throw new Error('No hay planes con este objetivo: ' + objective)
   return { eatingPlans, physiognomy } 
   console.log(eatingPlans)
 }
