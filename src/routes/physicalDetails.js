@@ -26,11 +26,14 @@ router.get('/:idTest', async (request, response) => {
   try {
     const newPhysicalDetails = await physicalDetails.findById(idTest)
     const test = newPhysicalDetails.toObject({ virtuals: true })
+    const { physiognomy } = test
+    const { type, description } = physiognomy
     response.json({
       success: true,
       message: '',
       data: {
-        physicalDetails: test
+        type,
+        description
       }
     })
   } catch (error) {
