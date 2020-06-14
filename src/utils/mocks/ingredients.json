@@ -1,0 +1,36 @@
+{"_id":{"$oid":"5ed83d9c0617502287b5ad70"},"name":"pechuga","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"10"},"image":"https://okdiario.com/img/recetas/2016/04/Pollo-con-almendras-en-salsa-de-setas-5.jpg"}
+{"_id":{"$oid":"5ed83e870617502287b5ad71"},"name":"zanahoria","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"1.50"},"image":"https://soycomocomo.es/media/2019/03/zanahorias.jpg"}
+{"_id":{"$oid":"5ed83f090617502287b5ad72"},"name":"brocoli","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"2.0"},"image":"https://elpoderdelconsumidor.org/wp-content/uploads/2016/11/brocoli.jpg"}
+{"_id":{"$oid":"5ed83f880617502287b5ad73"},"name":"brocoli coronas","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5.0"},"image":"https://thumbs.dreamstime.com/b/coronas-del-br%C3%B3culi-42394211.jpg"}
+{"_id":{"$oid":"5ed83fc60617502287b5ad74"},"name":"germinado de alfalfa","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"22"},"image":"https://www.bidfoodiberia.com/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/p/e/pecobral.jpg"}
+{"_id":{"$oid":"5ed83ff60617502287b5ad75"},"name":"espinaca","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"22"},"image":"https://s1.eestatic.com/2015/03/26/cocinillas/Cocinillas_21007951_115875214_1024x576.jpg"}
+{"_id":{"$oid":"5ed8401f0617502287b5ad76"},"name":"espinaca ramillete","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5"}}
+{"_id":{"$oid":"5ed840690617502287b5ad77"},"name":"pescado filete sierra","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"20"},"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgteYRk9JKLo6k2ZyEGYifMncMHcx_NZS8_1bSoE-X_UgztMDO&usqp=CAU"}
+{"_id":{"$oid":"5ed840d30617502287b5ad79"},"name":"pescado filete tilapia","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"16"}}
+{"_id":{"$oid":"5ed840f90617502287b5ad7a"},"name":"pescado filete basa","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"13"}}
+{"_id":{"$oid":"5ed841360617502287b5ad7b"},"name":"huevo san juan","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5"}}
+{"_id":{"$oid":"5ed841a10617502287b5ad7d"},"name":"queso panela lala","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"11"}}
+{"_id":{"$oid":"5ed842030617502287b5ad7e"},"name":"queso panela esmeralda light","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"14"}}
+{"_id":{"$oid":"5ed8423f0617502287b5ad7f"},"name":"queso panela navarro","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"15"}}
+{"_id":{"$oid":"5ed8428b0617502287b5ad80"},"name":"yogurt griego yoplait natural","grams":{"$numberInt":"900"},"price":{"$numberInt":"49"}}
+{"_id":{"$oid":"5ed842c60617502287b5ad81"},"names":"yogurt griego danonne oikos natural","grams":{"$numberInt":"900"},"price":{"$numberInt":"62"}}
+{"_id":{"$oid":"5ed843040617502287b5ad82"},"name":"pan integral bimbo gde","grams":{"$numberInt":"680"},"price":{"$numberInt":"38"}}
+{"_id":{"$oid":"5ed843940617502287b5ad83"},"name":"pan integral great value","grams":{"$numberInt":"567"},"price":{"$numberInt":"30"}}
+{"_id":{"$oid":"5ed843ca0617502287b5ad84"},"name":"atun dolores agua","grams":{"$numberInt":"140"},"price":{"$numberInt":"17"}}
+{"_id":{"$oid":"5ed844020617502287b5ad85"},"name":"atun dolores en aceite","grams":{"$numberInt":"140"},"price":{"$numberInt":"17"}}
+{"_id":{"$oid":"5ed844360617502287b5ad86"},"name":"atun herdez en agua","grams":{"$numberInt":"140"},"price":{"$numberInt":"14"}}
+{"_id":{"$oid":"5ed8448b0617502287b5ad88"},"name":"barras bimbo multigrano linaza","grams":{"$numberInt":"192"},"price":{"$numberInt":"25"}}
+{"_id":{"$oid":"5ed845040617502287b5ad89"},"name":"barras suplemento multigrano ona ancestral","grams":{"$numberInt":"150"},"price":{"$numberInt":"17"}}
+{"_id":{"$oid":"5ed845460617502287b5ad8a"},"name":"platano chiapas","grams":{"$numberInt":"1000"},"price":{"$numberInt":"19"}}
+{"_id":{"$oid":"5ed8456a0617502287b5ad8b"},"name":"platano manzano ","grams":{"$numberInt":"1000"},"price":{"$numberInt":"24"}}
+{"_id":{"$oid":"5ed8458e0617502287b5ad8c"},"name":"avena great value","grams":{"$numberInt":"1000"},"price":{"$numberInt":"23"}}
+{"_id":{"$oid":"5ed845c90617502287b5ad8d"},"name":"avena gran vita","grams":{"$numberInt":"400"},"price":{"$numberInt":"11"}}
+{"_id":{"$oid":"5ed845f80617502287b5ad8e"},"name":"avena great value","grams":{"$numberInt":"311"},"price":{"$numberInt":"8"}}
+{"_id":{"$oid":"5ed8463a0617502287b5ad90"},"name":"jamon de pavo lala","grams":"250","price":"28"}
+{"_id":{"$oid":"5edc4a2f81d51d186633062f"},"name":"jitomate","grams":"100","price":{"$numberDecimal":"3.90"}}
+{"_id":{"$oid":"5edc4aae81d51d1866330630"},"name":"cebolla","grams":"100","price":{"$numberDecimal":"2.0"}}
+{"_id":{"$oid":"5edc4afc81d51d1866330631"},"name":"papa","grams":"100","price":{"$numberDecimal":"3.00"}}
+{"_id":{"$oid":"5edc4b3581d51d1866330632"},"name":"pure de tomate","grams":"210","price":{"$numberDecimal":"6.0"}}
+{"_id":{"$oid":"5edc4b6381d51d1866330633"},"name":"lechuga","grams":"100","price":{"$numberDecimal":"18.90"}}
+{"_id":{"$oid":"5edc4bba81d51d1866330634"},"name":"crema lala","grams":"200","price":{"$numberDecimal":"13.80"}}
+{"_id":{"$oid":"5edfd7584335880981a29fea"},"name":"aguacate","grams":{"$numberInt":"100"},"price":{"$numberInt":"15"}}
