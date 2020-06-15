@@ -3,8 +3,13 @@ const Schema = mongoose.Schema
 const dishesSchema = new mongoose.Schema({
 
   _id: Schema.Types.ObjectId,
-  name: {
+  foodName: {
     type: String,
+    required: true
+  },
+  foodType: {
+    type: String,
+    enum: ['desayuno', 'comida', 'cena'],
     required: true
   },
 

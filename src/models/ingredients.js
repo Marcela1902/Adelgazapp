@@ -21,4 +21,5 @@ const ingredientsSchema = new mongoose.Schema({
   },
   _id: Schema.Types.ObjectId
 })
+
 module.exports = mongoose.model('Ingredients', ingredientsSchema)

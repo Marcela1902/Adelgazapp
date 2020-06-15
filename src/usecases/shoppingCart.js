@@ -4,7 +4,7 @@ const ShoppingCart = require('../models/shoppingCart')
 // const Users = require('../models/users')
 // const EatingPlan = require('../models/eatingPlan')
 // const Diets = require('../models/diets')
-// const
+// const Dishes = require('../models/dishes')
 
 function getAll () {
   return ShoppingCart.find({})
@@ -24,9 +24,9 @@ function getAll () {
 
 // async function getTotalPriceBuy (idUser) {
 //   const users = await Users.findById(idUser)
-//   if (users) throw new Error('el idUser ya existe')
-//   const eatingPlan = await EatingPlan.findById(idEatingPlan)
-//   const diets = await Diets.findById(idDiets)
+
+//   const eatingPlan = await EatingPlan.findById(idUser)
+//   const diets = await Diets.findById(idEatingPlan)
 //   diets.map((item) => {
 
 //   })

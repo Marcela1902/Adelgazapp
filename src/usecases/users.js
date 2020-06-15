@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const jwt = require('../lib/jwt')
 
-const Users = require('../models/users')
+const { Users } = require('../models/users')
 
 function getAll () {
   return Users.find({})

@@ -1,36 +1,169 @@
-{"_id":{"$oid":"5ed83d9c0617502287b5ad70"},"name":"pechuga","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"10"},"image":"https://okdiario.com/img/recetas/2016/04/Pollo-con-almendras-en-salsa-de-setas-5.jpg"}
-{"_id":{"$oid":"5ed83e870617502287b5ad71"},"name":"zanahoria","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"1.50"},"image":"https://soycomocomo.es/media/2019/03/zanahorias.jpg"}
-{"_id":{"$oid":"5ed83f090617502287b5ad72"},"name":"brocoli","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"2.0"},"image":"https://elpoderdelconsumidor.org/wp-content/uploads/2016/11/brocoli.jpg"}
-{"_id":{"$oid":"5ed83f880617502287b5ad73"},"name":"brocoli coronas","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5.0"},"image":"https://thumbs.dreamstime.com/b/coronas-del-br%C3%B3culi-42394211.jpg"}
-{"_id":{"$oid":"5ed83fc60617502287b5ad74"},"name":"germinado de alfalfa","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"22"},"image":"https://www.bidfoodiberia.com/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/p/e/pecobral.jpg"}
-{"_id":{"$oid":"5ed83ff60617502287b5ad75"},"name":"espinaca","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"22"},"image":"https://s1.eestatic.com/2015/03/26/cocinillas/Cocinillas_21007951_115875214_1024x576.jpg"}
-{"_id":{"$oid":"5ed8401f0617502287b5ad76"},"name":"espinaca ramillete","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5"}}
-{"_id":{"$oid":"5ed840690617502287b5ad77"},"name":"pescado filete sierra","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"20"},"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgteYRk9JKLo6k2ZyEGYifMncMHcx_NZS8_1bSoE-X_UgztMDO&usqp=CAU"}
-{"_id":{"$oid":"5ed840d30617502287b5ad79"},"name":"pescado filete tilapia","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"16"}}
-{"_id":{"$oid":"5ed840f90617502287b5ad7a"},"name":"pescado filete basa","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"13"}}
-{"_id":{"$oid":"5ed841360617502287b5ad7b"},"name":"huevo san juan","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"5"}}
-{"_id":{"$oid":"5ed841a10617502287b5ad7d"},"name":"queso panela lala","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"11"}}
-{"_id":{"$oid":"5ed842030617502287b5ad7e"},"name":"queso panela esmeralda light","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"14"}}
-{"_id":{"$oid":"5ed8423f0617502287b5ad7f"},"name":"queso panela navarro","grams":{"$numberDecimal":"100"},"price":{"$numberDecimal":"15"}}
-{"_id":{"$oid":"5ed8428b0617502287b5ad80"},"name":"yogurt griego yoplait natural","grams":{"$numberInt":"900"},"price":{"$numberInt":"49"}}
-{"_id":{"$oid":"5ed842c60617502287b5ad81"},"names":"yogurt griego danonne oikos natural","grams":{"$numberInt":"900"},"price":{"$numberInt":"62"}}
-{"_id":{"$oid":"5ed843040617502287b5ad82"},"name":"pan integral bimbo gde","grams":{"$numberInt":"680"},"price":{"$numberInt":"38"}}
-{"_id":{"$oid":"5ed843940617502287b5ad83"},"name":"pan integral great value","grams":{"$numberInt":"567"},"price":{"$numberInt":"30"}}
-{"_id":{"$oid":"5ed843ca0617502287b5ad84"},"name":"atun dolores agua","grams":{"$numberInt":"140"},"price":{"$numberInt":"17"}}
-{"_id":{"$oid":"5ed844020617502287b5ad85"},"name":"atun dolores en aceite","grams":{"$numberInt":"140"},"price":{"$numberInt":"17"}}
-{"_id":{"$oid":"5ed844360617502287b5ad86"},"name":"atun herdez en agua","grams":{"$numberInt":"140"},"price":{"$numberInt":"14"}}
-{"_id":{"$oid":"5ed8448b0617502287b5ad88"},"name":"barras bimbo multigrano linaza","grams":{"$numberInt":"192"},"price":{"$numberInt":"25"}}
-{"_id":{"$oid":"5ed845040617502287b5ad89"},"name":"barras suplemento multigrano ona ancestral","grams":{"$numberInt":"150"},"price":{"$numberInt":"17"}}
-{"_id":{"$oid":"5ed845460617502287b5ad8a"},"name":"platano chiapas","grams":{"$numberInt":"1000"},"price":{"$numberInt":"19"}}
-{"_id":{"$oid":"5ed8456a0617502287b5ad8b"},"name":"platano manzano ","grams":{"$numberInt":"1000"},"price":{"$numberInt":"24"}}
-{"_id":{"$oid":"5ed8458e0617502287b5ad8c"},"name":"avena great value","grams":{"$numberInt":"1000"},"price":{"$numberInt":"23"}}
-{"_id":{"$oid":"5ed845c90617502287b5ad8d"},"name":"avena gran vita","grams":{"$numberInt":"400"},"price":{"$numberInt":"11"}}
-{"_id":{"$oid":"5ed845f80617502287b5ad8e"},"name":"avena great value","grams":{"$numberInt":"311"},"price":{"$numberInt":"8"}}
-{"_id":{"$oid":"5ed8463a0617502287b5ad90"},"name":"jamon de pavo lala","grams":"250","price":"28"}
-{"_id":{"$oid":"5edc4a2f81d51d186633062f"},"name":"jitomate","grams":"100","price":{"$numberDecimal":"3.90"}}
-{"_id":{"$oid":"5edc4aae81d51d1866330630"},"name":"cebolla","grams":"100","price":{"$numberDecimal":"2.0"}}
-{"_id":{"$oid":"5edc4afc81d51d1866330631"},"name":"papa","grams":"100","price":{"$numberDecimal":"3.00"}}
-{"_id":{"$oid":"5edc4b3581d51d1866330632"},"name":"pure de tomate","grams":"210","price":{"$numberDecimal":"6.0"}}
-{"_id":{"$oid":"5edc4b6381d51d1866330633"},"name":"lechuga","grams":"100","price":{"$numberDecimal":"18.90"}}
-{"_id":{"$oid":"5edc4bba81d51d1866330634"},"name":"crema lala","grams":"200","price":{"$numberDecimal":"13.80"}}
-{"_id":{"$oid":"5edfd7584335880981a29fea"},"name":"aguacate","grams":{"$numberInt":"100"},"price":{"$numberInt":"15"}}
+// {
+//   "_id": "5ee0f15874181b21400fa527",
+//   "name": "Tortilla",
+//   "grams": 23,
+//   "price": 56,
+//   "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee0f16974181b21400fa528",
+//   "name": "papa",
+//   "grams": 56,
+//   "price": 67,
+//   "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee140d88be2301182e6b522",
+//   "name": "pan integral bimbo",
+//   "grams": 500,
+//   "price": 40,
+//   "image": "https://www.chedraui.com.mx/medias/7501000111459-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTEzNzk3fGltYWdlL2pwZWd8aGQ4L2gxZS85NTI3ODI5MjMzNjk0LmpwZ3xiYTdkMTUzMTZlODNiNDhkZDI1MjA0ZWMxZGNjODAzMmVjNmJmODE5ZTliNjc5NWNjN2IzY2ZjNzRiZGQyNDg5",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee3d4f1c9a74e249ac402ba",
+//   "name": "harina integral",
+//   "grams": 500,
+//   "price": 40,
+//   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNZieA-T_X-lyliLyxoJ9jf3XDA2jbGksfW68Wbo-FE--Ob4fLqBHaNZMYHxcTMc5HCxbhOCgz&usqp=CAc",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6bf025ef62f31ee91e74c",
+//   "name": "pechuga",
+//   "grams": 100,
+//   "price": 10,
+//   "image": "https://images.app.goo.gl/tcHjfRBS5u7iF5BY6",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6bf515ef62f31ee91e74d",
+//   "name": "zanahoria",
+//   "grams": 100,
+//   "price": 1.5,
+//   "image": "https://s1.eestatic.com/2015/01/12/cocinillas/Cocinillas_2759784_115876110_1024x576.jpg",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6bf8f5ef62f31ee91e74e",
+//   "name": "brocoli",
+//   "grams": 100,
+//   "price": 2,
+//   "image": "https://lh3.googleusercontent.com/proxy/RraYpeOmXroePD3msguvR5eV83I2iJQ5UiIJ-36elmH_uPh602p_VzgMux-bzJ63r4g0vaf69NLoGIpwUqXC-dMQCKs3mCFmJJA31GUTPfrwO6YK7FjBigMVOpgmGmxV4PSP",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6bfc45ef62f31ee91e74f",
+//   "name": "pescado filete sierra",
+//   "grams": 100,
+//   "price": 20,
+//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6bfe65ef62f31ee91e750",
+//   "name": "pescado filete tilapia",
+//   "grams": 100,
+//   "price": 16,
+//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c0365ef62f31ee91e751",
+//   "name": "pescado filete basa",
+//   "grams": 100,
+//   "price": 13,
+//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c05d5ef62f31ee91e752",
+//   "name": "huevo sn juan",
+//   "grams": 100,
+//   "price": 5,
+//   "image": "https://images.app.goo.gl/UVww1SLEpygxuwd7A",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c0bd5ef62f31ee91e753",
+//   "name": "queso panela lala",
+//   "grams": 100,
+//   "price": 11,
+//   "image": "https://images.app.goo.gl/7ruJcm9sRTjboPKt8",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c0dc5ef62f31ee91e754",
+//   "name": "queso panela esmeralda light",
+//   "grams": 100,
+//   "price": 14,
+//   "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c1095ef62f31ee91e755",
+//   "name": "queso panela esmeralda navarro",
+//   "grams": 100,
+//   "price": 15,
+//   "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c12e5ef62f31ee91e756",
+//   "name": "yogurt griego yoplait natural",
+//   "grams": 900,
+//   "price": 49,
+//   "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c1545ef62f31ee91e757",
+//   "name": "yogurt griego danonne oikos natural",
+//   "grams": 900,
+//   "price": 62,
+//   "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c1b15ef62f31ee91e758",
+//   "name": "yogurt griego danonne oikos natural",
+//   "grams": 900,
+//   "price": 62,
+//   "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750104009516L.jpg",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c2775ef62f31ee91e759",
+//   "name": "pan integral great value",
+//   "grams": 567,
+//   "price": 30,
+//   "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750179161446L.jpg",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c3115ef62f31ee91e75a",
+//   "name": "atun dolores agua",
+//   "grams": 567,
+//   "price": 30,
+//   "image": "https://s.cornershopapp.com/product-images/1182843.jpg?versionId=TU392PeBV3OZ5DsL_kF4rZF2S55KyrBt",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c33c4abe460fa72c1b0b",
+//   "name": "Nueces",
+//   "grams": 100,
+//   "price": 28,
+//   "image": "https://images.app.goo.gl/HjkEJCMHsQkK6gtS7",
+//   "__v": 0
+// },
+// {
+//   "_id": "5ee6c3da4abe460fa72c1b0c",
+//   "name": "sal",
+//   "grams": 100,
+//   "price": 7,
+//   "image": "https://images.app.goo.gl/5AT65uzankc1Bvq7A",
+//   "__v": 0
+// }
+
