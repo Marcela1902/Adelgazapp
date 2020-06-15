@@ -22,6 +22,26 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.post('/manyDiets', async (request, response) => {
+  try {
+    const body = request.body
+    const newDiets = await diets.insertDiets(body)
+    response.json({
+      succes: true,
+      message: 'many diets',
+      data: {
+        diets: newDiets
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 router.post('/', async (request, response) => {
   console.log('diets')
   try {
