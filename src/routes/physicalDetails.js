@@ -28,6 +28,7 @@ router.get('/:idTest', async (request, response) => {
     const test = newPhysicalDetails.toObject({ virtuals: true })
     const { physiognomy } = test
     const { type, description } = physiognomy
+   
     response.json({
       success: true,
       message: '',
