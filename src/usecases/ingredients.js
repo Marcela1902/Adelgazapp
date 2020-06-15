@@ -3,6 +3,7 @@ const Ingredients = require('../models/ingredients')
 
 function getAll (id) {
   return Ingredients.find({})
+    .populate('ingredients')
 }
 
 function create (ingredientsData) {

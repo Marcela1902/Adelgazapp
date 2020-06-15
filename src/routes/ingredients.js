@@ -3,21 +3,22 @@ const ingredients = require('../usecases/ingredients')
 const router = express.Router()
 // const auth = require('../middlewares/auth')
 
-router.get('/', async (request, response) => {
+router.post('/', async (request, response) => {
   try {
-    const allIngredients = await ingredients.getAll()
+    const body = request.body
+    const newIngredient = await ingredients.create(body)
     response.json({
       success: true,
-      message: 'all ingredients',
+      message: 'ingredient add',
       data: {
-        ingredients: allIngredients
+        ingredient: newIngredient
       }
     })
   } catch (error) {
     response.status(400)
     response.json({
       success: false,
-      message: error.message
+      error: error.message
     })
   }
 })
@@ -44,20 +45,19 @@ router.post('/manyIngredients', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    const body = request.body
-    const newIngredient = await ingredients.create(body)
+    const allIngredients = await ingredients.getAll()
     response.json({
       success: true,
-      message: 'ingredient add',
+      message: 'all ingredients',
       data: {
-        ingredient: newIngredient
+        ingredients: allIngredients
       }
     })
   } catch (error) {
     response.status(400)
     response.json({
       success: false,
-      error: error.message
+      message: error.message
     })
   }
 })

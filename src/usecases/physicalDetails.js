@@ -1,4 +1,4 @@
-// const mongoose = require('mongoose')
+const { EatingPlan } = require('../models/eatingPlan')
 const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
 
@@ -7,40 +7,23 @@ function getAll () {
 }
 
 async function create (idUser, physicalDetailsData) {
-  console.log(idUser)
-  const users = Users.findById(idUser)
-  console.log(users)
-  const { idTest: test } = users
-  if (test) throw new Error('El test ya fue relizado')
+  const user = await Users.findById(idUser)
+  if (!user) throw new Error('User does not exist with id: ' + idUser)
+  if (user.idTest) throw new Error('El test ya fue realizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
-  const { _id: idTest, physiognomy } = physicalDetails
-  await Users.findByIdAndUpdate(idUser, { idTest })
-
-  /* const eatingsPlan = EatingPlan.find({ objective }) */
-  return { physiognomy }
-
-  /* const detail = await Users.findByIdAndUpdate(idUser, {
-    $set: {
-      idTest: _id
-    }
-  })
-  console.log(detail)
-  console.log (physicalDetails.toObject({ virtuals: true }))
-  console.log (idUser)
-  return (detail) */
+  const { _id: idTest, physiognomy, objective } = physicalDetails
+  Users.findByIdAndUpdate(idUser, { idTest })
+  const eatingPlans = await EatingPlan.find({ objective }).limit(1)
+  if (!eatingPlans) throw new Error('No hay planes con este objetivo: ' + objective)
+  return { eatingPlans, physiognomy }
 }
 
-function deleteById (id) {
-  return PhysicalDetails.findByIdAndRemove(id)
-}
-
-function updateById (id, newPhysicalDetailsData) {
-  return PhysicalDetails.findByIdAndUpdate(id, newPhysicalDetailsData, { new: true })
+function findById (idTest) {
+  return PhysicalDetails.findById(idTest)
 }
 
 module.exports = {
   getAll,
   create,
-  deleteById,
-  updateById
+  findById
 }

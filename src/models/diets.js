@@ -4,10 +4,10 @@ const dietsSchema = new mongoose.Schema({
   dayNumber: {
     type: Number,
     required: true
-
   },
 
-  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }]
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
+  ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }]
 
 })
 const Diets = mongoose.model('diets', dietsSchema)

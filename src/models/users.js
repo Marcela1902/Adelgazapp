@@ -29,11 +29,7 @@ const usersSchema = new mongoose.Schema({
   },
   // eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
   direction: [{ type: Schema.Types.ObjectId, ref: 'direction' }],
-  eatingPlan: [{
-    type: Schema.Types.ObjectId,
-    ref: 'eatingPlan'
-  }
-  ],
+  eatingPlans: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
   idBuy: [{
     type: Schema.Types.ObjectId,
     ref: 'shoppingCart'
