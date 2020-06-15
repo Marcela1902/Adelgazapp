@@ -26,12 +26,12 @@ router.post('/', async (request, response) => {
 router.post('/manyIngredients', async (request, response) => {
   try {
     const body = request.body
-    const Ingredients = await ingredients.insertIngredients(body)
+    const newIngredients = await ingredients.insertIngredients(body)
     response.json({
       succes: true,
       message: 'many ingredients',
       data: {
-        ingredients: Ingredients
+        ingredients: newIngredients
       }
     })
   } catch (error) {

@@ -14,6 +14,17 @@ function getAll () {
     })
 }
 
+async function insertEatingPlan (eatingPlanData) {
+  const { allEatingPlan } = eatingPlanData
+  var addeatingPlan = allEatingPlan.map((eatingPlan) => {
+    var ideatingPlan = new mongoose.Types.ObjectId()
+    eatingPlan._id = ideatingPlan
+    return eatingPlan
+  })
+  var totalEatingPlan = await EatingPlan.insertMany(addeatingPlan)
+  return totalEatingPlan
+}
+
 function filterByObjective (objective) {
   return EatingPlan.find({ objective })
     .populate({
@@ -34,6 +45,7 @@ function create (eatingPlanData) {
 
 module.exports = {
   getAll,
+  insertEatingPlan,
   create,
   filterByObjective
 

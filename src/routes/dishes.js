@@ -22,6 +22,26 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.post('/manyDishes', async (request, response) => {
+  try {
+    const body = request.body
+    const newDishes = await dishes.insertDishes(body)
+    response.json({
+      succes: true,
+      message: 'many dishes',
+      data: {
+        dishes: newDishes
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 router.post('/', async (request, response) => {
   try {
     const newdishes = await dishes.create(request.body)
