@@ -23,7 +23,27 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.get('/', async (request, response) => {
+router.post('/manyIngredients', async (request, response) => {
+  try {
+    const body = request.body
+    const Ingredients = await ingredients.insertIngredients(body)
+    response.json({
+      succes: true,
+      message: 'many ingredients',
+      data: {
+        ingredients: Ingredients
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
+router.post('/', async (request, response) => {
   try {
     const allIngredients = await ingredients.getAll()
     response.json({

@@ -1,0 +1,146 @@
+// "dishes": [
+//   {
+//       "ingredients": [
+//           "5ed843ca0617502287b5ad84",
+//           "5edfd7584335880981a29fea"
+//       ],
+//       "_id": "5edfdf9190cdb90c0c48109a",
+//       "name": "aguacate relleno con atun",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5ed843ca0617502287b5ad84",
+//           "5edfd7584335880981a29fea"
+//       ],
+//       "_id": "5edfe288a8e1be0ecedbab78",
+//       "name": "aguacate relleno con atun2",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee06db71fde921abe230533",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee074c7b4fc4122a4243da1",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee07f05b84297326385faf1",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee0812f80815332b169e4db",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee0862780815332b169e4dc",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5ee0f15874181b21400fa527",
+//           "5ee0f16974181b21400fa528"
+//       ],
+//       "_id": "5ee0fa6c74181b21400fa529",
+//       "name": "Pechuga al vapor",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5ee0f15874181b21400fa527",
+//           "5ee0f16974181b21400fa528"
+//       ],
+//       "_id": "5ee11d4774181b21400fa52a",
+//       "name": "Pechuga a las brazas",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5ee0f15874181b21400fa527",
+//           "5ee0f16974181b21400fa528"
+//       ],
+//       "_id": "5ee125971d942c627cd646e6",
+//       "name": "Pechuga a las brazas",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee141418be2301182e6b523",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee142868be2301182e6b524",
+//       "name": "pechuga al ajillo",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5ee0f15874181b21400fa527",
+//           "5ee0f16974181b21400fa528"
+//       ],
+//       "_id": "5ee1d5ca7223875fa53c6373",
+//       "name": "pasta con pechuga",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee3d52dc9a74e249ac402bb",
+//       "name": "pasta con atun",
+//       "__v": 0
+//   },
+//   {
+//       "ingredients": [
+//           "5edfb3c69be45b79105f283e",
+//           "5edf27fe0d12a30e61691294",
+//           "5edfbada0f31624b1c039db6"
+//       ],
+//       "_id": "5ee3f5531be9f43aab4fa37b",
+//       "name": "pasta con atun",
+//       "__v": 0
+//   }
+// ]

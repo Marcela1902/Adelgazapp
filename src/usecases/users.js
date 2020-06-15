@@ -4,11 +4,19 @@ const mongoose = require('mongoose')
 
 const jwt = require('../lib/jwt')
 
-const Users = require('../models/users')
+const { Users } = require('../models/users')
 
 function getAll () {
   return Users.find({})
-    .populate('physicalDetails')
+    .populate({
+      path: 'physicalDetails',
+      populate: {
+        path: 'eatingPlan',
+        populate: {
+          path: 'direction'
+        }
+      }
+    })
 }
 
 function create (userData) {
@@ -42,7 +50,6 @@ async function login (email, password) {
 
   return { token, name, lastName, _id, idTest }
 }
-
 module.exports = {
   getAll,
   create,

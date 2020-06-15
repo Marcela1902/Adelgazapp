@@ -3,10 +3,6 @@ const Schema = mongoose.Schema
 const eatingPlanSchema = new mongoose.Schema({
 
   _id: Schema.Types.ObjectId,
-  name: {
-    type: String,
-    required: true
-  },
   description: {
     type: String
   },

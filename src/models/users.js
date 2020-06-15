@@ -23,39 +23,17 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8
   },
-  street: {
-    type: String
-  },
-  CP: {
-    type: Number
-  },
-  numberExt: {
-    type: Number
-  },
-  numberInt: {
-    type: Number
-  },
-  colonia: {
-    type: String
-  },
-  city: {
-    type: String
-  },
-  reference: {
-    type: String
-  },
   idTest: {
     type: Schema.Types.ObjectId,
     ref: 'physicalDetails'
   },
-  eatingPlans: [{
-    type: Schema.Types.ObjectId,
-    ref: 'eatingPlan'
-  }
-  ],
+  // eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
+  direction: [{ type: Schema.Types.ObjectId, ref: 'direction' }],
+  eatingPlans: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
   idBuy: [{
     type: Schema.Types.ObjectId,
     ref: 'shoppingCart'
   }]
 })
+
 module.exports = mongoose.model('users', usersSchema)

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const dietsSchema = new mongoose.Schema({
-  name: {
-    type: String,
+  dayNumber: {
+    type: Number,
     required: true
   },
 

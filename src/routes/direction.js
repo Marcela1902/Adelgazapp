@@ -10,7 +10,7 @@ router.get('/', async (request, response) => {
       success: true,
       message: 'all directions',
       data: {
-        dishes: allDirection
+        direction: allDirection
       }
     })
   } catch (error) {
@@ -29,7 +29,7 @@ router.post('/', async (request, response) => {
       success: true,
       message: 'direction add',
       data: {
-        dishes: newDirection
+        direction: newDirection
       }
     })
   } catch (error) {

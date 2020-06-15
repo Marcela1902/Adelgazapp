@@ -1,13 +1,13 @@
-// const mongoose = require('mongoose')
-const direction = require('../models/direction')
+const mongoose = require('mongoose')
+const { Direction } = require('../models/direction')
 
 function getAll () {
-  return direction.find({})
+  return Direction.find({})
 }
 
 function create (directionData) {
-  // directionData._id = new mongoose.Types.ObjectId()
-  return direction.create(directionData)
+  directionData._id = new mongoose.Types.ObjectId()
+  return Direction.create(directionData)
 }
 
 module.exports = {
