@@ -12,10 +12,27 @@ async function create (idUser, physicalDetailsData) {
   if (user.idTest) throw new Error('El test ya fue realizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id: idTest, physiognomy, objective } = physicalDetails
-  Users.findByIdAndUpdate(idUser, { idTest })
+  await Users.findByIdAndUpdate(idUser, { idTest })
   const eatingPlans = await EatingPlan.find({ objective }).limit(1)
   if (!eatingPlans) throw new Error('No hay planes con este objetivo: ' + objective)
-  return { eatingPlans, physiognomy }
+  return { eatingPlans, physiognomy, idTest }
+}
+
+async function infoTest (idUser) {
+  const user = await Users.findById(idUser)
+    .populate({
+      path: 'eatingPlans idTest',
+      populate: {
+        path: 'diets dishes ingredients',
+        populate: {
+          path: 'dishes',
+          populate: {
+            path: 'ingredients'
+          }
+        }
+      }
+    })
+  return user
 }
 
 function findById (idTest) {
@@ -25,5 +42,6 @@ function findById (idTest) {
 module.exports = {
   getAll,
   create,
-  findById
+  findById,
+  infoTest
 }

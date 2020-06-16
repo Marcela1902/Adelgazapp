@@ -1,169 +1,132 @@
-// {
-//   "_id": "5ee0f15874181b21400fa527",
-//   "name": "Tortilla",
-//   "grams": 23,
-//   "price": 56,
-//   "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee0f16974181b21400fa528",
-//   "name": "papa",
-//   "grams": 56,
-//   "price": 67,
-//   "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee140d88be2301182e6b522",
-//   "name": "pan integral bimbo",
-//   "grams": 500,
-//   "price": 40,
-//   "image": "https://www.chedraui.com.mx/medias/7501000111459-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTEzNzk3fGltYWdlL2pwZWd8aGQ4L2gxZS85NTI3ODI5MjMzNjk0LmpwZ3xiYTdkMTUzMTZlODNiNDhkZDI1MjA0ZWMxZGNjODAzMmVjNmJmODE5ZTliNjc5NWNjN2IzY2ZjNzRiZGQyNDg5",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee3d4f1c9a74e249ac402ba",
-//   "name": "harina integral",
-//   "grams": 500,
-//   "price": 40,
-//   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNZieA-T_X-lyliLyxoJ9jf3XDA2jbGksfW68Wbo-FE--Ob4fLqBHaNZMYHxcTMc5HCxbhOCgz&usqp=CAc",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6bf025ef62f31ee91e74c",
-//   "name": "pechuga",
-//   "grams": 100,
-//   "price": 10,
-//   "image": "https://images.app.goo.gl/tcHjfRBS5u7iF5BY6",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6bf515ef62f31ee91e74d",
-//   "name": "zanahoria",
-//   "grams": 100,
-//   "price": 1.5,
-//   "image": "https://s1.eestatic.com/2015/01/12/cocinillas/Cocinillas_2759784_115876110_1024x576.jpg",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6bf8f5ef62f31ee91e74e",
-//   "name": "brocoli",
-//   "grams": 100,
-//   "price": 2,
-//   "image": "https://lh3.googleusercontent.com/proxy/RraYpeOmXroePD3msguvR5eV83I2iJQ5UiIJ-36elmH_uPh602p_VzgMux-bzJ63r4g0vaf69NLoGIpwUqXC-dMQCKs3mCFmJJA31GUTPfrwO6YK7FjBigMVOpgmGmxV4PSP",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6bfc45ef62f31ee91e74f",
-//   "name": "pescado filete sierra",
-//   "grams": 100,
-//   "price": 20,
-//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6bfe65ef62f31ee91e750",
-//   "name": "pescado filete tilapia",
-//   "grams": 100,
-//   "price": 16,
-//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c0365ef62f31ee91e751",
-//   "name": "pescado filete basa",
-//   "grams": 100,
-//   "price": 13,
-//   "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c05d5ef62f31ee91e752",
-//   "name": "huevo sn juan",
-//   "grams": 100,
-//   "price": 5,
-//   "image": "https://images.app.goo.gl/UVww1SLEpygxuwd7A",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c0bd5ef62f31ee91e753",
-//   "name": "queso panela lala",
-//   "grams": 100,
-//   "price": 11,
-//   "image": "https://images.app.goo.gl/7ruJcm9sRTjboPKt8",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c0dc5ef62f31ee91e754",
-//   "name": "queso panela esmeralda light",
-//   "grams": 100,
-//   "price": 14,
-//   "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c1095ef62f31ee91e755",
-//   "name": "queso panela esmeralda navarro",
-//   "grams": 100,
-//   "price": 15,
-//   "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c12e5ef62f31ee91e756",
-//   "name": "yogurt griego yoplait natural",
-//   "grams": 900,
-//   "price": 49,
-//   "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c1545ef62f31ee91e757",
-//   "name": "yogurt griego danonne oikos natural",
-//   "grams": 900,
-//   "price": 62,
-//   "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c1b15ef62f31ee91e758",
-//   "name": "yogurt griego danonne oikos natural",
-//   "grams": 900,
-//   "price": 62,
-//   "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750104009516L.jpg",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c2775ef62f31ee91e759",
-//   "name": "pan integral great value",
-//   "grams": 567,
-//   "price": 30,
-//   "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750179161446L.jpg",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c3115ef62f31ee91e75a",
-//   "name": "atun dolores agua",
-//   "grams": 567,
-//   "price": 30,
-//   "image": "https://s.cornershopapp.com/product-images/1182843.jpg?versionId=TU392PeBV3OZ5DsL_kF4rZF2S55KyrBt",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c33c4abe460fa72c1b0b",
-//   "name": "Nueces",
-//   "grams": 100,
-//   "price": 28,
-//   "image": "https://images.app.goo.gl/HjkEJCMHsQkK6gtS7",
-//   "__v": 0
-// },
-// {
-//   "_id": "5ee6c3da4abe460fa72c1b0c",
-//   "name": "sal",
-//   "grams": 100,
-//   "price": 7,
-//   "image": "https://images.app.goo.gl/5AT65uzankc1Bvq7A",
-//   "__v": 0
-// }
+/*  "allIngredients":[
+ {
+  "name": "Tortilla",
+  "grams": 23,
+  "price": 56,
+  "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
+
+},{
+  "name": "Papa",
+  "grams": 56,
+  "price": 67,
+  "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/golden-cachorro_0.jpg",
+  
+},{
+  "name": "Pan integral bimbo",
+  "grams": 500,
+  "price": 40,
+  "image": "https://www.chedraui.com.mx/medias/7501000111459-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTEzNzk3fGltYWdlL2pwZWd8aGQ4L2gxZS85NTI3ODI5MjMzNjk0LmpwZ3xiYTdkMTUzMTZlODNiNDhkZDI1MjA0ZWMxZGNjODAzMmVjNmJmODE5ZTliNjc5NWNjN2IzY2ZjNzRiZGQyNDg5",
+  
+},{
+  "name": "Harina integral",
+  "grams": 500,
+  "price": 40,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNZieA-T_X-lyliLyxoJ9jf3XDA2jbGksfW68Wbo-FE--Ob4fLqBHaNZMYHxcTMc5HCxbhOCgz&usqp=CAc",
+  
+},{
+  "name": "Pechuga",
+  "grams": 100,
+  "price": 10,
+  "image": "https://images.app.goo.gl/tcHjfRBS5u7iF5BY6",
+  
+},{
+  "name": "Zanahoria",
+  "grams": 100,
+  "price": 1.5,
+  "image": "https://s1.eestatic.com/2015/01/12/cocinillas/Cocinillas_2759784_115876110_1024x576.jpg",
+  "__v": 0
+},{
+  "name": "Brocoli",
+  "grams": 100,
+  "price": 2,
+  "image": "https://lh3.googleusercontent.com/proxy/RraYpeOmXroePD3msguvR5eV83I2iJQ5UiIJ-36elmH_uPh602p_VzgMux-bzJ63r4g0vaf69NLoGIpwUqXC-dMQCKs3mCFmJJA31GUTPfrwO6YK7FjBigMVOpgmGmxV4PSP",
+ 
+},{
+  "name": "Pescado filete sierra",
+  "grams": 100,
+  "price": 20,
+  "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+ 
+},{
+
+  "name": "Pescado filete tilapia",
+  "grams": 100,
+  "price": 16,
+  "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+  
+},{
+  "name": "Pescado filete basa",
+  "grams": 100,
+  "price": 13,
+  "image": "https://s.cornershopapp.com/product-images/1190937.jpg?versionId=rJRphRF4wwwoKfKqxm9RW.aPhT5js1Xm",
+  
+},{
+  "name": "Huevo sn juan",
+  "grams": 100,
+  "price": 5,
+  "image": "https://images.app.goo.gl/UVww1SLEpygxuwd7A",
+  
+},{
+  "name": "Queso panela lala",
+  "grams": 100,
+  "price": 11,
+  "image": "https://images.app.goo.gl/7ruJcm9sRTjboPKt8",
+  
+},{
+  "name": "Queso panela esmeralda light",
+  "grams": 100,
+  "price": 14,
+  "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
+  
+},{
+  "name": "Queso panela esmeralda navarro",
+  "grams": 100,
+  "price": 15,
+  "image": "https://images.app.goo.gl/mPyomoMxAVNMoGdW8",
+ 
+},{
+  "name": "Yogurt griego yoplait natural",
+  "grams": 900,
+  "price": 49,
+  "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
+
+},{
+  "name": "Yogurt griego danonne oikos natural",
+  "grams": 900,
+  "price": 62,
+  "image": "https://i2.wp.com/naturallynatalia.net/wp-content/uploads/2018/06/yogur-griego.jpg?fit=500%2C394",
+
+},{
+  "name": "Yogurt griego danonne oikos natural",
+  "grams": 900,
+  "price": 62,
+  "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750104009516L.jpg",
+ 
+},{
+  "name": "Pan integral great value",
+  "grams": 567,
+  "price": 30,
+  "image": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/gr/images/product-images/img_large/00750179161446L.jpg",
+  
+},{
+  "name": "Atún dolores agua",
+  "grams": 567,
+  "price": 30,
+  "image": "https://s.cornershopapp.com/product-images/1182843.jpg?versionId=TU392PeBV3OZ5DsL_kF4rZF2S55KyrBt",
+
+},{
+  "name": "Nueces",
+  "grams": 100,
+  "price": 28,
+  "image": "https://images.app.goo.gl/HjkEJCMHsQkK6gtS7",
+
+},{
+  "name": "Sal",
+  "grams": 100,
+  "price": 7,
+  "image": "https://images.app.goo.gl/5AT65uzankc1Bvq7A",
+ 
+}
+]
+ */
 

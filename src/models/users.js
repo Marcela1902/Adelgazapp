@@ -25,7 +25,7 @@ const usersSchema = new mongoose.Schema({
   },
   idTest: {
     type: Schema.Types.ObjectId,
-    ref: 'physicalDetails'
+    ref: 'PhysicalDetails'
   },
   // eatingPlan: [{ type: Schema.Types.ObjectId, ref: 'eatingPlan' }],
   direction: [{ type: Schema.Types.ObjectId, ref: 'direction' }],

@@ -1,146 +1,750 @@
-// "dishes": [
-//   {
-//       "ingredients": [
-//           "5ed843ca0617502287b5ad84",
-//           "5edfd7584335880981a29fea"
-//       ],
-//       "_id": "5edfdf9190cdb90c0c48109a",
-//       "name": "aguacate relleno con atun",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5ed843ca0617502287b5ad84",
-//           "5edfd7584335880981a29fea"
-//       ],
-//       "_id": "5edfe288a8e1be0ecedbab78",
-//       "name": "aguacate relleno con atun2",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee06db71fde921abe230533",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee074c7b4fc4122a4243da1",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee07f05b84297326385faf1",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee0812f80815332b169e4db",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee0862780815332b169e4dc",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5ee0f15874181b21400fa527",
-//           "5ee0f16974181b21400fa528"
-//       ],
-//       "_id": "5ee0fa6c74181b21400fa529",
-//       "name": "Pechuga al vapor",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5ee0f15874181b21400fa527",
-//           "5ee0f16974181b21400fa528"
-//       ],
-//       "_id": "5ee11d4774181b21400fa52a",
-//       "name": "Pechuga a las brazas",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5ee0f15874181b21400fa527",
-//           "5ee0f16974181b21400fa528"
-//       ],
-//       "_id": "5ee125971d942c627cd646e6",
-//       "name": "Pechuga a las brazas",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee141418be2301182e6b523",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee142868be2301182e6b524",
-//       "name": "pechuga al ajillo",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5ee0f15874181b21400fa527",
-//           "5ee0f16974181b21400fa528"
-//       ],
-//       "_id": "5ee1d5ca7223875fa53c6373",
-//       "name": "pasta con pechuga",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee3d52dc9a74e249ac402bb",
-//       "name": "pasta con atun",
-//       "__v": 0
-//   },
-//   {
-//       "ingredients": [
-//           "5edfb3c69be45b79105f283e",
-//           "5edf27fe0d12a30e61691294",
-//           "5edfbada0f31624b1c039db6"
-//       ],
-//       "_id": "5ee3f5531be9f43aab4fa37b",
-//       "name": "pasta con atun",
-//       "__v": 0
-//   }
-// ]
+{
+  "allDishes": [
+      {
+          "foodName": "Ensalada de brocoli,zanahoria y nuez",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d33905f",
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Arroz frito con coliflor",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d339094",
+              "5ee7b3ec3d828b590d339070",
+              "5ee7b3ec3d828b590d33906f",
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d339074",
+              "5ee7b3ec3d828b590d339071"
+          ]
+      },
+      {
+          "foodName": "Calabacitas rellenas de Atun",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339073",
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d33906d",
+              "5ee7b3ec3d828b590d339076",
+              "5ee7b3ec3d828b590d339079",
+              "5ee7b3ec3d828b590d33907a",
+              "5ee7b3ec3d828b590d339078",
+              "5ee7b3ec3d828b590d33907c",
+              "5ee7b3ec3d828b590d33906b",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d339075"
+          ]
+      },
+      {
+          "foodName": "Tomate relleno",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d339093",
+              "5ee7b3ec3d828b590d33907b",
+              "5ee7b3ec3d828b590d339073",
+              "5ee7b3ec3d828b590d33907c",
+              "5ee7b3ec3d828b590d339083"
+          ]
+      },
+      {
+          "foodName": "Salteado de Verduras",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d33907d"
+          ]
+      },
+      {
+          "foodName": "Ensalada de col y brocoli",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33907e",
+              "5ee7b3ec3d828b590d33907f",
+              "5ee7b3ec3d828b590d339080",
+              "5ee7b3ec3d828b590d339081"
+          ]
+      },
+      {
+          "foodName": "Canelones con queso en salsa de jitomate",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339083",
+              "5ee7b3ec3d828b590d339084",
+              "5ee7b3ec3d828b590d339085",
+              ""
+          ]
+      },
+      {
+          "foodName": "Ensalada de nopal",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339086",
+              "5ee7b3ec3d828b590d33908a"
+          ]
+      },
+      {
+          "foodName": "Sincronizadas vegetarianas",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33908a",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d33907b"
+          ]
+      },
+      {
+          "foodName": "Alambre de vegetales",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d339084",
+              "5ee7b3ec3d828b590d33907b",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33907d",
+              "5ee7b3ec3d828b590d339089",
+              "5ee7c8b93d828b590d339099"
+          ]
+      },
+      {
+          "foodName": "Sandwich de vegetales y queso panela",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905b",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d33908a",
+              "5ee7b3ec3d828b590d33908b",
+              "5ee7b3ec3d828b590d33908c"
+          ]
+      },
+      {
+          "foodName": "Sopes de nopal con queso panela ",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33908d",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d33908e",
+              "5ee7b3ec3d828b590d339086",
+              "5ee7b3ec3d828b590d33908f",
+              "5ee7b3ec3d828b590d33908f",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Nuggets de coliflor verde",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d339070",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339090",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Calabacitas rellenas de soya",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339073",
+              "5ee7b3ec3d828b590d339091",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Tacos de requeson con rajas poblanas ",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339087",
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d339092",
+              "5ee7b3ec3d828b590d339086",
+              "5ee7b3ec3d828b590d339093",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Burrito de vegetales ",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339087",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339088",
+              "5ee7b3ec3d828b590d339084",
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Sopa de flor de calabaza ",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339094",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d339095",
+              "5ee7b3ec3d828b590d33907d",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Huevo a la mexicana",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d33906e",
+              "5ee7b3ec3d828b590d339059"
+          ]
+      },
+      {
+          "foodName": "Alambre de bistec con queso ",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339059",
+              "5ee7b3ec3d828b590d339096",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339088",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d33906e"
+          ]
+      },
+      {
+          "foodName": "Sandwich de pollo ",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905b",
+              "5ee7b3ec3d828b590d33905d",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d33908a",
+              "5ee7c8b93d828b590d3390ba"
+          ]
+      },
+      {
+          "foodName": "Tostadas de atun ",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33908d",
+              "5ee7b3ec3d828b590d33906b",
+              "5ee7b3ec3d828b590d339093",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7c8b93d828b590d3390ba"
+          ]
+      },
+      {
+          "foodName": "Ensalada de tomate",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7c8b93d828b590d339098",
+              "5ee7b3ec3d828b590d33906d",
+              "5ee7b3ec3d828b590d339076",
+              "5ee7b3ec3d828b590d33907c",
+              "5ee7b3ec3d828b590d339077"
+          ]
+      },
+      {
+          "foodName": "Ensalada de espinacas",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339084",
+              "5ee7b3ec3d828b590d33906c",
+              "5ee7b3ec3d828b590d33906f"
+          ]
+      },
+      {
+          "foodName": "Pechuga de pollo a la plancha con patatas dulces y arroz integral blanco",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905d",
+              "5ee7c8b93d828b590d3390b1",
+              "5ee7b3ec3d828b590d339094"
+          ]
+      },
+      {
+          "foodName": "Ensalada de atun primavera extra",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33906b",
+              "5ee7b3ec3d828b590d33908b",
+              "5ee7b3ec3d828b590d33907d",
+              "5ee7c8b93d828b590d3390ba",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d33907b"
+          ]
+      },
+      {
+          "foodName": "Sandwich doble de pechuga de pavo c/pasta fria con trocitos de jamon",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905b",
+              "5ee7c8b93d828b590d3390a0",
+              "5ee7b3ec3d828b590d33908a",
+              "5ee7b3ec3d828b590d339065",
+              "5ee7b3ec3d828b590d339075",
+              "5ee7b3ec3d828b590d339077",
+              "5ee7c8b93d828b590d3390bc"
+          ]
+      },
+      {
+          "foodName": "Pollo asado y verduras al vapor",
+          "foodType": "Cena",
+          "ingredients": [
+              "5ee7b3ec3d828b590d33905d",
+              "5ee7b3ec3d828b590d33905e",
+              "5ee7b3ec3d828b590d33905f",
+              "5ee7c8b93d828b590d3390bb"
+          ]
+      },
+      {
+          "foodName": "Arroz al vapor con pollo y res",
+          "foodType": "Comida",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339094",
+              "5ee7b3ec3d828b590d33905d",
+              "5ee7b3ec3d828b590d339096"
+          ]
+      },
+      {
+          "foodName": "Aguacates con atun y arroz al vapor",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339094",
+              "5ee7b3ec3d828b590d33908b",
+              "5ee7b3ec3d828b590d33906b"
+          ]
+      },
+      {
+          "foodName": "Omelette de huevo con champiñones y papa ",
+          "foodType": "Desayuno",
+          "ingredients": [
+              "5ee7b3ec3d828b590d339063",
+              "5ee7b3ec3d828b590d33907b",
+              "5ee7b3ec3d828b590d33905a"
+          ]
+          },
+          {
+              "foodName": "Sandwich de pollo ",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905b",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7b3ec3d828b590d33908a",
+                  "5ee7c8b93d828b590d3390ba"
+              ]
+          },
+          {
+              "foodName": "Alambre de pollo y res y pimientos",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d339096",
+                  "5ee7b3ec3d828b590d339088",
+                  "5ee7b3ec3d828b590d339091",
+                  "5ee7c8b93d828b590d3390b3"
+              ]
+          },
+          {
+              "foodName": "Burrito de vegetales ",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339087",
+                  "5ee7b3ec3d828b590d339065",
+                  "5ee7b3ec3d828b590d339088",
+                  "5ee7b3ec3d828b590d339084",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d33906e"
+              ]
+          },
+
+          {
+              "foodName": "Pasta con atun y verduras",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7b3ec3d828b590d33906b",
+                  "5ee7c8b93d828b590d3390b4",
+                  "5ee7c8b93d828b590d3390af"
+              ]
+          },
+          {
+              "foodName": "Omelette con champiñones y tocino",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7b3ec3d828b590d33907b",
+                  "5ee7c8b93d828b590d3390b5"
+              ]
+          },
+          {
+              "foodName": "Ensalada de quinoa y tomate con perejil",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7c8b93d828b590d3390b8",
+                  "5ee7c8b93d828b590d3390b2",
+                  "5ee7c8b93d828b590d33909c",
+                  "5ee7b3ec3d828b590d33906e",
+                  "5ee7b3ec3d828b590d33906f"
+              ]
+          },
+          {
+              "foodName": "Quesadillas de pavo y aguacate",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7c8b93d828b590d3390b6",
+                  "5ee7b3ec3d828b590d339087",
+                  "5ee7c8b93d828b590d3390ad",
+                  "5ee7c8b93d828b590d3390a0",
+                  "5ee7c8b93d828b590d3390ad",
+                  "5ee7b3ec3d828b590d33908f"
+              ]
+          },
+          {
+              "foodName": "Ensalada de espinaca con frutos secos y queso",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339084",
+                  "5ee7b3ec3d828b590d339065",
+                  "5ee7c8b93d828b590d3390b7",
+                  "5ee7c8b93d828b590d3390ae"
+              ]
+          },
+          {
+              "foodName": "Pollo a la plancha con verduras al vapor y arroz integral",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d33905f",
+                  "5ee7c8b93d828b590d3390bb",
+                  "5ee7b3ec3d828b590d339094"
+              ]
+          },
+          {
+              "foodName": " Huevo cocido con berros y pasta con aderezo cesar",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7c8b93d828b590d3390b9",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7c8b93d828b590d3390af",
+                  "5ee7c8b93d828b590d3390b2"
+              ]
+          },
+          {
+              "foodName": "Sandwich de pechuga de pollo asada con queso",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905b",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33908a",
+                  "5ee7b3ec3d828b590d339065",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d339077"
+              ]
+          },
+          {
+              "foodName": "Ensalada de lechuga con queso y frutos secos",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33908a",
+                  "5ee7b3ec3d828b590d339065",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7c8b93d828b590d3390b7",
+                  "5ee7c8b93d828b590d3390b0"
+              ]
+          },
+          {
+              "foodName": "Ensalada de espinacas pavo y quinoa",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339084",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7c8b93d828b590d3390b8",
+                  "5ee7c8b93d828b590d3390b0"
+              ]
+          },
+          {
+              "foodName": "Ensalada de espinacas con lechuga quinoa queso y frutos secos",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339084",
+                  "5ee7b3ec3d828b590d33908a",
+                  "5ee7c8b93d828b590d3390b8",
+                  "5ee7b3ec3d828b590d339065",
+                  "5ee7c8b93d828b590d3390b7"
+              ]
+          },
+          {
+              "foodName": "Quesadillas de queso con pollo y champiñones",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d33907b",
+                  "5ee7b3ec3d828b590d339076",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7c8b93d828b590d3390ad",
+                  "5ee7b3ec3d828b590d339087"
+              ]
+          },
+          {
+              "foodName": "Omelette de huevo con chayote y ejotes",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7b3ec3d828b590d33905a",
+                  "5ee7c8b93d828b590d3390bb",
+                  "5ee7c8b93d828b590d3390ad"
+              ]
+          },
+          {
+              "foodName": "Calabazas rellenas",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339073",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7c8b93d828b590d3390ad",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d339093"
+              ]
+          },
+          {
+              "foodName": "Pescado a las finas hierbas",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339061",
+                  "5ee7c8b93d828b590d3390a2",
+                  "5ee7b3ec3d828b590d33906d",
+                  "5ee7c8b93d828b590d33909b"
+              ]
+          },
+          {
+              "foodName": " Tortas de zanahoria",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7b3ec3d828b590d33905c"
+                  
+              ]
+          },
+          {
+              "foodName": "Ensalada de pollo y lechuga",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33908a",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7b3ec3d828b590d33908b",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339075"
+              ]
+          },
+          {
+              "foodName": "Ensalada de nopales",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339086",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7b3ec3d828b590d33906d"
+              ]
+          },
+          {
+              "foodName": "Pollo al horno con papas",
+              "foodType": "Cena",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905a",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d339088",
+                  "5ee7c8b93d828b590d3390a3",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339076",
+                  "5ee7b3ec3d828b590d33906d"
+              ]
+          },
+          {
+              "foodName": "Quesadillas de queso con pollo y champiñones",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d33907b",
+                  "5ee7b3ec3d828b590d339076",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7c8b93d828b590d3390ad",
+                  "5ee7b3ec3d828b590d339087"
+              ]
+          },
+          {
+              "foodName": "Estofado de pollo",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905a",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d33906d",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7c8b93d828b590d3390a7"
+                  
+              ]
+          },
+          {
+              "foodName": "Pollo entomatado con hierbas",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7c8b93d828b590d33909c",
+                  "5ee7c8b93d828b590d3390a4",
+                  "5ee7b3ec3d828b590d33906d"
+                  
+              ]
+          },
+          {
+              "foodName": "Arroz con pollo",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33906d",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d339088",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339076",
+                  "5ee7b3ec3d828b590d33906e",
+                  "5ee7b3ec3d828b590d339094"
+
+              ]
+          },
+          {
+              "foodName": "Ensalada de nopales",
+              "foodType": "Desayuno",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339086",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d339077",
+                  "5ee7b3ec3d828b590d33906d"
+              ]
+          },
+          {
+              "foodName": "Enslada de quinoa y tomate con perejil",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7c8b93d828b590d3390b8",
+                  "5ee7c8b93d828b590d3390b2",
+                  "5ee7c8b93d828b590d33909c",
+                  "5ee7b3ec3d828b590d33906e",
+                  "5ee7b3ec3d828b590d33906f"
+              ]
+          },
+          {
+              "foodName": "Milanesa de pollo ",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7b3ec3d828b590d339090",
+                  "5ee7c8b93d828b590d33909c",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d33908f"
+              ]
+          },{
+              "foodName": "Arroz caldoso con pollo",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d339076",
+                  "5ee7c8b93d828b590d3390a5",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7c8b93d828b590d3390a2"
+              ]
+              
+          },{
+              "foodName": " Tostadas de pollo",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d339059",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d33906f",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7c8b93d828b590d3390a6",
+                  "5ee7c8b93d828b590d33909f",
+                  "5ee7b3ec3d828b590d33908a"
+                  
+              ]
+          },{
+              "foodName": "Estofado de pollo",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33905d",
+                  "5ee7b3ec3d828b590d339075",
+                  "5ee7b3ec3d828b590d339088",
+                  "5ee7c8b93d828b590d33909b",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7b3ec3d828b590d33906d"
+                  
+
+              ]
+          },{
+              "foodName": "Pollo al limon",
+              "foodType": "Comida",
+              "ingredients": [
+                  "5ee7b3ec3d828b590d33906f",
+                  "5ee7b3ec3d828b590d33905e",
+                  "5ee7b3ec3d828b590d339063",
+                  "5ee7c8b93d828b590d3390a9",
+                  "5ee7b3ec3d828b590d33908f",
+                  "5ee7c8b93d828b590d3390aa",
+                  "5ee7b3ec3d828b590d339074"
+              ]
+          },
+          {
+              "foodName": "Pollo con almendra",
+              "foodType": "Comida",
+              "ingredients": [
+                 "5ee7b3ec3d828b590d33905e",
+                 "5ee7c8b93d828b590d3390ab",
+                 "5ee7b3ec3d828b590d33905e",
+                 "5ee7b3ec3d828b590d339075",
+                 "5ee7c8b93d828b590d3390ac",
+                 "5ee7b3ec3d828b590d33908f"
+              ]
+          }
+      ]
+  }
