@@ -9,7 +9,7 @@ const dishesSchema = new mongoose.Schema({
   },
   foodType: {
     type: String,
-    enum: ['desayuno', 'comida', 'cena'],
+    enum: ['Desayuno', 'Comida', 'Cena'],
     required: true
   },
 
