@@ -1,5 +1,6 @@
 const express = require('express')
 const physicalDetails = require('../usecases/physicalDetails')
+const { EatingPlan } = require('../models/eatingPlan')
 const router = express.Router()
 
 router.get('/', async (request, response) => {
@@ -21,11 +22,12 @@ router.get('/', async (request, response) => {
   }
 })
 
-router.get('/:idTest', async (request, response) => {
+router.get('/test/:idTest', async (request, response) => {
   const { idTest } = request.params
   try {
     const newPhysicalDetails = await physicalDetails.findById(idTest)
     const test = newPhysicalDetails.toObject({ virtuals: true })
+    const { objective } = newPhysicalDetails
     const { physiognomy } = test
     const { type, description } = physiognomy
     response.json({
@@ -33,7 +35,28 @@ router.get('/:idTest', async (request, response) => {
       message: '',
       data: {
         type,
-        description
+        description,
+        objective
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
+router.get('/:idUser', async (request, response) => {
+  const { idUser } = request.params
+  try {
+    const newTest = await physicalDetails.infoTest(idUser)
+    response.json({
+      success: true,
+      message: '',
+      data: {
+        newTest
       }
     })
   } catch (error) {
