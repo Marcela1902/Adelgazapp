@@ -11,14 +11,11 @@ const eatingPlanSchema = new mongoose.Schema({
     enum: ['adelgazar', 'volumen', 'tonificar'],
     required: true
   },
-  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }],
-  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
-  ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }]
+  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
+
 
 })
 
 const EatingPlan = mongoose.model('eatingPlan', eatingPlanSchema)
 
-module.exports = {
-  EatingPlan
-}
+module.exports = EatingPlan
