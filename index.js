@@ -12,7 +12,7 @@ const db = require('./src/lib/db')
 async function mainProductions () {
   await db.connectProductions()
   console.log('-DB CONNECTED-')
-  server.listen(8082, () => 
+  server.listen(8082, () => {
     console.log('SERVER IS RUNNING')
   })
 }
