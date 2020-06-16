@@ -5,12 +5,12 @@ const router = express.Router()
 
 router.get('/', async (request, response) => {
   try {
-    const alldishes = await dishes.getAll()
+    const allDishes = await dishes.getAll()
     response.json({
       success: true,
       message: 'all dishes',
       data: {
-        dishes: alldishes
+        dishes: allDishes
       }
     })
   } catch (error) {
@@ -27,7 +27,7 @@ router.post('/manyDishes', async (request, response) => {
     const body = request.body
     const newDishes = await dishes.insertDishes(body)
     response.json({
-      succes: true,
+      success: true,
       message: 'many dishes',
       data: {
         dishes: newDishes
