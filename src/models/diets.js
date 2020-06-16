@@ -6,8 +6,8 @@ const dietsSchema = new mongoose.Schema({
     required: true
   },
 
-  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
-  ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }]
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }]
+
 
 })
 const Diets = mongoose.model('diets', dietsSchema)

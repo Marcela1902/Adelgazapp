@@ -7,14 +7,6 @@ const db = require('./src/lib/db')
   server.listen(8082, () => {
     console.log('SERVER IS RUNNING')
   })
-} */
-
-async function mainProductions () {
-  await db.connectProductions()
-  console.log('-DB CONNECTED-')
-  server.listen(8082, () => {
-    console.log('SERVER IS RUNNING')
-  })
 }
 
 /* mainDevelopment()
@@ -23,8 +15,14 @@ async function mainProductions () {
   })
   .catch(error => console.error('ERROR:', error)) */
 
-mainProductions()
+mainDevelopment()
   .then(() => {
     console.log('SERVER IS READY')
   })
   .catch(error => console.error('ERROR:', error))
+
+// mainProductions()
+//   .then(() => {
+//     console.log('SERVER IS READY')
+//   })
+//   .catch(error => console.error('ERROR:', error))

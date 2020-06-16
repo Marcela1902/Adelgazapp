@@ -13,7 +13,7 @@ const dishesSchema = new mongoose.Schema({
     required: true
   },
 
-  ingredients: [{ type: Schema.Types.ObjectId, ref: 'Ingredients' }]
+  ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }]
 
 })
 

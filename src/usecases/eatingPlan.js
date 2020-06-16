@@ -27,15 +27,6 @@ async function insertEatingPlan (eatingPlanData) {
 
 function filterByObjective (objective) {
   return EatingPlan.find({ objective })
-    .populate({
-      path: 'diets',
-      populate: {
-        path: 'dishes',
-        populate: {
-          path: 'ingredients'
-        }
-      }
-    })
 }
 
 function create (eatingPlanData) {
