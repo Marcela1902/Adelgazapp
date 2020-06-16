@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 const ShoppingCart = require('../models/shoppingCart')
-// const Ingredients = require('../models/ingredients')
-// const Users = require('../models/users')
-// const EatingPlan = require('../models/eatingPlan')
-// const Diets = require('../models/diets')
-// const Dishes = require('../models/dishes')
+const Ingredients = require('../models/ingredients')
+const Users = require('../models/users')
+const EatingPlan = require('../models/eatingPlan')
+const Diets = require('../models/diets')
+const Dishes = require('../models/dishes')
 
 function getAll () {
   return ShoppingCart.find({})
@@ -22,27 +22,64 @@ function getAll () {
     })
 }
 
-// async function getTotalPriceBuy (idUser) {
-//   const users = await Users.findById(idUser)
+async function getTotalPriceBuy (idEatingPlan) {
+  const eatingPlanFound = await EatingPlan.findById(idEatingPlan)
+    .populate({
+      path: 'diets',
+      populate: {
+        path: 'dishes',
+        populate: {
+          path: 'ingredients'
 
-//   const eatingPlan = await EatingPlan.findById(idUser)
-//   const diets = await Diets.findById(idEatingPlan)
-//   diets.map((item) => {
+        }
+      }
+    })
+  const { diets } = eatingPlanFound
+  const arrayDiets = diets.map((diet) => {
+    const { dishes } = diet
+    const { ingredients } = dishes
+    return dishes
+  })
+  const arrayIngredients = arrayDiets.map((ingredient) => {
+    return ingredient
+  })
 
-//   })
-//   const dishes = await Dishes.findById(idDishes)
-//   const ingredients = await Ingredients.findById(idIngredients)
+  const { ingredients } = arrayIngredients
+  return ingredients
 
-//   const newOrder = await ingredients.map((price) => {
-//     const { name, grams, ...restProperties } = price
-//     return restProperties
-//   })
+  // const { ingredients } = arrayIngredients
+  // const arrayPrices = ingredients.reduce((accum, ingredient) => {
+  //   return accum + ingredient.price
+  // }, 0)
+  // return arrayPrices
 
-//   const sumaTotal = newOrder.reduce((accum, ingredients) => {
-//     return accum + ingredients.price
-//   }, 0)
-//   return sumaTotal
-// }
+  // return arrayIngredients
+
+  // console.log(dish)
+
+  // // const eatingPlans = user.eatingPlans
+  // // eatingPlans.forEach((eatingPlan) => {
+  // //   const { diets: { dishes: { ingredients } } } = eatingPlan
+  // //   // const ingredientsArray = []
+  // //   console.log(ingredients)
+  // })
+
+  // const dishes = diets.map((diet) => {
+  //   return diet.dishes
+  // })
+  // console.log(diets)
+  // const ingredients = dishes.map((dishe) => {
+  //   console.log(dishe)
+  //   return dishe.ingredients
+  // })
+  // console.log(ingredients)
+  // console.log(eatingPlans)
+
+  // const sumaTotal = newOrder.reduce((accum, ingredients) => {
+  //   return accum + ingredients.price
+  // }, 0)
+  // return eatingPlans
+}
 
 function create (shoppingCartData) {
   shoppingCartData._id = new mongoose.Types.ObjectId()
@@ -51,6 +88,6 @@ function create (shoppingCartData) {
 
 module.exports = {
   getAll,
-  // getTotalPriceBuy,
+  getTotalPriceBuy,
   create
 }

@@ -22,6 +22,26 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.get('/getTotalPriceBuy/:idEatingPlan', async (request, response) => {
+  try {
+    const { idEatingPlan } = request.params
+    const totalPrice = await shoppingCart.getTotalPriceBuy(idEatingPlan)
+    response.json({
+      success: true,
+      message: 'eating plans',
+      data: {
+        ...totalPrice
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 router.post('/', async (request, response) => {
   try {
     console.log(shoppingCart)
