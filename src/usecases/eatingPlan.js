@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { EatingPlan } = require('../models/eatingPlan')
+const EatingPlan = require('../models/eatingPlan')
 
 function getAll () {
   return EatingPlan.find({})
@@ -25,19 +25,28 @@ async function insertEatingPlan (eatingPlanData) {
   return totalEatingPlan
 }
 
-function filterByObjective (objective) {
-  return EatingPlan.find({ objective })
-}
-
 function create (eatingPlanData) {
   eatingPlanData._id = new mongoose.Types.ObjectId()
   return EatingPlan.create(eatingPlanData)
+}
+
+function getFindById (idEatingPlan) {
+  return EatingPlan.findById(idEatingPlan)
+    .populate({
+      path: 'diets',
+      populate: {
+        path: 'dishes',
+        populate: {
+          path: 'ingredients'
+        }
+      }
+    })
 }
 
 module.exports = {
   getAll,
   insertEatingPlan,
   create,
-  filterByObjective
+  getFindById
 
 }
