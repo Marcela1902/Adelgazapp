@@ -5,18 +5,32 @@ const router = express.Router()
 
 router.get('/', async (request, response) => {
   try {
-    var eatingPlans
-    const { objective } = request.params
-    if (objective) {
-      eatingPlans = await eatingPlan.filterByObjective(objective)
-    } else {
-      eatingPlans = await eatingPlan.getAll()
-    }
+    const alleatingPlan = await eatingPlan.getAll()
     response.json({
       success: true,
       message: 'all eatingPlan',
       data: {
-        eatingPlan: eatingPlans
+        eatingPlan: alleatingPlan
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
+router.get('/:idEatingPlan', async (request, response) => {
+  const { idEatingPlan } = request.params
+  try {
+    const idPlan = await eatingPlan.getFindById(idEatingPlan)
+    response.json({
+      success: true,
+      message: 'all eatingPlan',
+      data: {
+        eatingPlan: idPlan
       }
     })
   } catch (error) {
