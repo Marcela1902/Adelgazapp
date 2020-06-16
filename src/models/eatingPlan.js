@@ -11,7 +11,9 @@ const eatingPlanSchema = new mongoose.Schema({
     enum: ['adelgazar', 'volumen', 'tonificar'],
     required: true
   },
-  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
+  diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }],
+  dishes: [{ type: Schema.Types.ObjectId, ref: 'dishes' }],
+  ingredients: [{ type: Schema.Types.ObjectId, ref: 'ingredients' }]
 
 })
 
