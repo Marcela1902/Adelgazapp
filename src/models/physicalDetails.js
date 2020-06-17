@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 const physicalDetailsSchema = new mongoose.Schema({
   age: {
     type: Number,
@@ -35,7 +36,9 @@ const physicalDetailsSchema = new mongoose.Schema({
     type: String,
     enum: ['adelgazar', 'volumen', 'tonificar'],
     required: true
-  }
+  },
+  users: [{ type: Schema.Types.ObjectId, ref: 'users' }]
+
   /* _id: Schema.Types.ObjectId */
 })
 const ectomorfo = {

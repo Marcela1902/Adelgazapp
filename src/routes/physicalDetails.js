@@ -52,11 +52,12 @@ router.get('/:idUser', async (request, response) => {
   const { idUser } = request.params
   try {
     const newTest = await physicalDetails.infoTest(idUser)
+    const { eatingPlans } = newTest
     response.json({
       success: true,
       message: '',
       data: {
-        newTest
+        ...eatingPlans
       }
     })
   } catch (error) {

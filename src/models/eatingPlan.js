@@ -13,7 +13,6 @@ const eatingPlanSchema = new mongoose.Schema({
   },
   diets: [{ type: Schema.Types.ObjectId, ref: 'diets' }]
 
-
 })
 
 const EatingPlan = mongoose.model('eatingPlan', eatingPlanSchema)
