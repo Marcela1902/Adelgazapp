@@ -34,51 +34,42 @@ async function getTotalPriceBuy (idEatingPlan) {
         }
       }
     })
+
   const { diets } = eatingPlanFound
   const arrayDiets = diets.map((diet) => {
     const { dishes } = diet
-    const { ingredients } = dishes
     return dishes
   })
-  const arrayIngredients = arrayDiets.map((ingredient) => {
-    return ingredient
+
+  let arrayIngredients = []
+
+  arrayDiets.forEach((ingredient) => {
+    const { ingredients } = ingredient[0]
+    const allIngredients = ingredients.reduce((acum, item) => {
+      acum = [...acum, item]
+      return acum
+    }, [])
+    arrayIngredients = [...arrayIngredients, ...allIngredients]
   })
 
-  const { ingredients } = arrayIngredients
-  return ingredients
+  // const arrayPrices = arrayIngredients.map(({ price }) => {
+  //   return price
+  // })
+  // console.log(arrayPrices)
 
-  // const { ingredients } = arrayIngredients
-  // const arrayPrices = ingredients.reduce((accum, ingredient) => {
-  //   return accum + ingredient.price
+  // const newArrayPrices = arrayPrices.reduce((acum, price) => {
+  //   return acum + price
   // }, 0)
-  // return arrayPrices
+  // return { newArrayPrices }
 
-  // return arrayIngredients
-
-  // console.log(dish)
-
-  // // const eatingPlans = user.eatingPlans
-  // // eatingPlans.forEach((eatingPlan) => {
-  // //   const { diets: { dishes: { ingredients } } } = eatingPlan
-  // //   // const ingredientsArray = []
-  // //   console.log(ingredients)
-  // })
-
-  // const dishes = diets.map((diet) => {
-  //   return diet.dishes
-  // })
-  // console.log(diets)
-  // const ingredients = dishes.map((dishe) => {
-  //   console.log(dishe)
-  //   return dishe.ingredients
-  // })
-  // console.log(ingredients)
-  // console.log(eatingPlans)
-
-  // const sumaTotal = newOrder.reduce((accum, ingredients) => {
-  //   return accum + ingredients.price
+  // const uniqueSet = new Set(arrayPrices)
+  // const newArrayPrices = [...uniqueSet]
+  // Array.from(new Set(newArrayPrices))
+  // newArrayPrices.filter((item, index) => newArrayPrices.indexOf(item) !== index)
+  // newArrayPrices.reduce((acum, price) => {
+  //   return acum + price
   // }, 0)
-  // return eatingPlans
+  // return newArrayPrices
 }
 
 function create (shoppingCartData) {
