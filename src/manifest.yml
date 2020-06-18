@@ -1,5 +1,5 @@
 applications:
-- name: fitU
+- name: fitU-api
   memory: 64M
   stack: cflinuxfs3
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
