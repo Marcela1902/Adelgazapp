@@ -22,18 +22,19 @@ async function create (idUser, physicalDetailsData) {
 }
 
 async function infoTest (idUser) {
-  const user = await Users.findById(idUser).populate({
-    path: 'eatingPlans idTest',
-    populate: {
-      path: 'diets dishes ingredients',
+  const user = await Users.findById(idUser)
+    .populate({
+      path: 'eatingPlans idTest',
       populate: {
-        path: 'dishes',
+        path: 'diets dishes ingredients',
         populate: {
-          path: 'ingredients'
+          path: 'dishes',
+          populate: {
+            path: 'ingredients'
+          }
         }
       }
-    }
-  })
+    })
   return user
 }
 
