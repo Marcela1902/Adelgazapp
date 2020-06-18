@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 const ShoppingCart = require('../models/shoppingCart')
-const Ingredients = require('../models/ingredients')
-const Users = require('../models/users')
 const EatingPlan = require('../models/eatingPlan')
-const Diets = require('../models/diets')
-const Dishes = require('../models/dishes')
 
 function getAll () {
   return ShoppingCart.find({})
@@ -30,7 +26,6 @@ async function getTotalPriceBuy (idEatingPlan) {
         path: 'dishes',
         populate: {
           path: 'ingredients'
-
         }
       }
     })
@@ -41,35 +36,35 @@ async function getTotalPriceBuy (idEatingPlan) {
     return dishes
   })
 
-  let arrayIngredients = []
+  var arrayIngredients = []
 
   arrayDiets.forEach((ingredient) => {
     const { ingredients } = ingredient[0]
-    const allIngredients = ingredients.reduce((acum, item) => {
-      acum = [...acum, item]
-      return acum
+    const allIngredients = ingredients.reduce((accum, item) => {
+      accum = [...accum, item]
+      return accum
     }, [])
     arrayIngredients = [...arrayIngredients, ...allIngredients]
   })
 
-  // const arrayPrices = arrayIngredients.map(({ price }) => {
-  //   return price
-  // })
-  // console.log(arrayPrices)
+  const reduceCategory = arrayIngredients.reduce((ordered, articleItem) => {
+    const currentCategoriesArray = ordered[articleItem.name] || []
+    return {
+      ...ordered,
+      [articleItem.name]: [...currentCategoriesArray, articleItem]
+    }
+  }, [])
 
-  // const newArrayPrices = arrayPrices.reduce((acum, price) => {
-  //   return acum + price
-  // }, 0)
-  // return { newArrayPrices }
-
-  // const uniqueSet = new Set(arrayPrices)
-  // const newArrayPrices = [...uniqueSet]
-  // Array.from(new Set(newArrayPrices))
-  // newArrayPrices.filter((item, index) => newArrayPrices.indexOf(item) !== index)
-  // newArrayPrices.reduce((acum, price) => {
-  //   return acum + price
-  // }, 0)
-  // return newArrayPrices
+  const objEntries = Object.entries(reduceCategory)
+  let allIngredients = []
+  objEntries.forEach(ingredient => {
+    if (ingredient[1].length > 1) {
+      ingredient[1][0].price = ingredient[1][0].price * ingredient[1].length
+      ingredient[1][0].grams = ingredient[1][0].grams * ingredient[1].length
+    }
+    allIngredients = [...allIngredients, ingredient[1][0]]
+  })
+  return allIngredients
 }
 
 function create (shoppingCartData) {
