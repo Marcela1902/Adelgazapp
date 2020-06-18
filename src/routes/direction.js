@@ -22,9 +22,30 @@ router.get('/', async (request, response) => {
   }
 })
 
-router.post('/', async (request, response) => {
+router.get('/:idDirection', async (request, response) => {
+  const { idDirection } = request.params
   try {
-    const newDirection = await direction.create(request.body)
+    const idDirec = await direction.findAddress(idDirection)
+    response.json({
+      success: true,
+      message: 'all directions',
+      data: {
+        direction: idDirec
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
+router.post('/:idUser', async (request, response) => {
+  const { idUser } = request.params
+  try {
+    const newDirection = await direction.createAddress(idUser, request.body)
     response.json({
       success: true,
       message: 'direction add',
