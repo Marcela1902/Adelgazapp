@@ -1,6 +1,7 @@
 const EatingPlan = require('../models/eatingPlan')
 const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
+const { randomElements } = require('../utils/functions/random')
 
 function getAll () {
   return PhysicalDetails.find({})
@@ -12,12 +13,13 @@ async function create (idUser, physicalDetailsData) {
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id: idTest, objective } = physicalDetails
   await Users.findByIdAndUpdate(idUser, { idTest })
-  const eatingPlans = await EatingPlan.find({ objective }).limit(1)
-  const { _id: idEatingPlant } = eatingPlans[0]
+  const eatingPlans = await EatingPlan.find({ objective })
+  const onePlan = randomElements(eatingPlans, 1)
+  const { _id: idEatingPlant } = onePlan[0]
   const userEatingPlan = await Users.findByIdAndUpdate(idUser, {
     $push: { eatingPlans: idEatingPlant }
   })
-  if (!eatingPlans) throw new Error('No hay planes con este objetivo: ' + objective)
+  if (!onePlan) throw new Error('No hay planes con este objetivo: ' + objective)
   return { eatingPlans, objective, idTest, userEatingPlan }
 }
 
