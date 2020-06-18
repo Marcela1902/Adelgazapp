@@ -29,9 +29,8 @@ router.get('/getTotalPriceBuy/:idEatingPlan', async (request, response) => {
     response.json({
       success: true,
       message: 'eating plans',
-      data: {
-        ...totalPrice
-      }
+      data: totalPrice
+
     })
   } catch (error) {
     response.status(400)
