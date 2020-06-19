@@ -4,6 +4,7 @@ const Direction = require('../models/direction')
 
 async function getAll (idUser) {
   const user = await Users.findById(idUser)
+  console.log(user)
   const { direction } = user
   // var userDirection = direction
   return direction

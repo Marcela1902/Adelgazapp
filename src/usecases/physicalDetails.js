@@ -3,27 +3,34 @@ const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
 const { randomElements } = require('../utils/functions/random')
 
-function getAll () {
+function getAll() {
   return PhysicalDetails.find({})
 }
+
 async function createTest (idUser, physicalDetailsData) {
   const user = await Users.findById(idUser)
   if (!user) throw new Error('User does not exist with id: ' + idUser)
   if (user.idTest) throw new Error('El test ya fue realizado')
   const physicalDetails = await PhysicalDetails.create(physicalDetailsData)
   const { _id: idTest } = physicalDetails
-  const testCreated = await Users.findByIdAndUpdate(idUser, { idTest })
+  await Users.findByIdAndUpdate(idUser, { idTest })
   return user
 }
 
-// const eatingPlans = await EatingPlan.find({ objective })
-// const onePlan = randomElements(eatingPlans, 1)
-// const { _id: idEatingPlant } = onePlan[0]
-// const userEatingPlan = await Users.findByIdAndUpdate(idUser, {
-//   $push: { eatingPlans: idEatingPlant }
-// })
-// if (!onePlan) throw new Error('No hay planes con este objetivo: ' + objective)
-// return { eatingPlans, objective, idTest, userEatingPlan }
+async function insertPlan (idUser) {
+  const user = await Users.findById(idUser)
+  console.log(user)
+  const { idTest } = user
+  const test = await PhysicalDetails.findById(idTest)
+  const { objective, diameter } = test
+  const eatingPlan = await EatingPlan.find({ objective })
+  const randomPlan = randomElements(eatingPlan, 1)
+  const { _id: idEatingPlan } = randomPlan[0]
+  const userEatingPlan = await Users.findByIdAndUpdate(idUser, {
+    $push: { eatingPlans: idEatingPlan }
+  })
+  return { userEatingPlan, objective, diameter }
+}
 
 async function infoTest (idUser) {
   const user = await Users.findById(idUser)
@@ -42,21 +49,14 @@ async function infoTest (idUser) {
   return user
 }
 
-function findById (idTest) {
+function findById(idTest) {
   return PhysicalDetails.findById(idTest)
-}
-
-async function getIdTest (idUser) {
-  var findUser = await Users.findById(idUser)
-  const { idTest } = findUser
-  if (idTest) throw new Error('testPerform')
-  return findUser
 }
 
 module.exports = {
   getAll,
-  createTest,
   findById,
   infoTest,
-  getIdTest
+  createTest,
+  insertPlan
 }
