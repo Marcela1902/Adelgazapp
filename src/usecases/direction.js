@@ -4,10 +4,15 @@ const Direction = require('../models/direction')
 
 async function getAll (idUser) {
   const user = await Users.findById(idUser)
-  console.log(user)
-  const { direction } = user
-  // var userDirection = direction
-  return direction
+    .populate({
+      path: 'direction'
+    })
+
+  // const { street } = user
+  const userStreet = user.map((street) => {
+    return street
+  })
+  return userStreet
 }
 
 function create (directionData) {
