@@ -22,6 +22,25 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.get('/userDirection/:idUser', async (request, response) => {
+  try {
+    const allDirection = await direction.getAll()
+    response.json({
+      success: true,
+      message: 'all directions',
+      data: {
+        direction: allDirection
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 router.get('/:idDirection', async (request, response) => {
   const { idDirection } = request.params
   try {
