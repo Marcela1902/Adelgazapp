@@ -3,9 +3,6 @@ const physicalDetails = require('../usecases/physicalDetails')
 const { EatingPlan } = require('../models/eatingPlan')
 const router = express.Router()
 
-
-
-
 /* router.get('/idT', async (request, response) => {
   const { idTest } = request.params
   try {
