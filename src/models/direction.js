@@ -30,6 +30,4 @@ const directionSchema = new mongoose.Schema({
 
 const Direction = mongoose.model('direction', directionSchema)
 
-module.exports = {
-  Direction
-}
+module.exports = Direction

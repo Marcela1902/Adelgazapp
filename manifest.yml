@@ -1,0 +1,5 @@
+applications:
+- name: fitU-api
+  memory: 256M
+  health-check-type: process
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git

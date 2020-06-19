@@ -57,7 +57,7 @@ router.get('/:idUser', async (request, response) => {
       success: true,
       message: '',
       data: {
-        ...eatingPlans
+        eatingPlans
       }
     })
   } catch (error) {
