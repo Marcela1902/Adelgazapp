@@ -3,7 +3,7 @@ const direction = require('../usecases/direction')
 const router = express.Router()
 // const auth = require('../middlewares/auth')
 
-router.get('/', async (request, response) => {
+router.get('/userDirection/:idUser', async (request, response) => {
   try {
     const allDirection = await direction.getAll()
     response.json({
