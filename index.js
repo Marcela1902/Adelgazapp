@@ -12,9 +12,9 @@ var appEnv = cfenv.getAppEnv()
 //   })
 // }
 
-server.listen(appEnv.port, appEnv.bind, function () {
-  console.log('server starting on ' + appEnv.url)
-})
+// server.listen(appEnv.port, appEnv.bind, function () {
+//   console.log('server starting on ' + appEnv.url)
+// })
 
 async function mainProductions () {
   await db.connectProductions()
@@ -35,3 +35,7 @@ mainProductions()
     console.log('SERVER IS READY')
   })
   .catch(error => console.error('ERROR:', error))
+
+server.listen(appEnv.port, appEnv.bind, function () {
+  console.log('server starting on ' + appEnv.url)
+})

@@ -43,6 +43,7 @@ async function infoTest (idUser) {
 function findById (idTest) {
   return PhysicalDetails.findById(idTest)
 }
+
 module.exports = {
   getAll,
   create,
