@@ -2,26 +2,6 @@ const express = require('express')
 const direction = require('../usecases/direction')
 const router = express.Router()
 // const auth = require('../middlewares/auth')
-
-router.get('/userDirection/:idUser', async (request, response) => {
-  try {
-    const allDirection = await direction.getAll()
-    response.json({
-      success: true,
-      message: 'all directions',
-      data: {
-        direction: allDirection
-      }
-    })
-  } catch (error) {
-    response.status(400)
-    response.json({
-      success: false,
-      message: error.message
-    })
-  }
-})
-
 router.get('/userDirection/:idUser', async (request, response) => {
   try {
     const { idUser } = request.params
