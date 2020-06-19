@@ -30,7 +30,7 @@ app.use((request, response, next) => {
   console.log()
   next()
 })
-
+// app.set('port', process.env.PORT || 8080)
 app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 
