@@ -4,8 +4,11 @@ const Direction = require('../models/direction')
 
 async function getAll (idUser) {
   const user = await Users.findById(idUser)
+  console.log(user)
+  if (!user) throw new Error('El usuario no existe')
   const { direction } = user
-  return direction
+  const direct = Direction.findById(direction)
+  return direct
 }
 
 function create (directionData) {
