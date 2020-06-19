@@ -42,6 +42,26 @@ router.get('/:idEatingPlan', async (request, response) => {
   }
 })
 
+router.get('/allPlans/:idUser', async (request, response) => {
+  const { idUser } = request.params
+  try {
+    const idPlan = await eatingPlan.getAllEatingPlans(idUser)
+    response.json({
+      success: true,
+      message: 'all eatingPlan',
+      data: {
+        eatingPlan: idPlan
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 router.post('/manyEatingPlan', async (request, response) => {
   try {
     const body = request.body

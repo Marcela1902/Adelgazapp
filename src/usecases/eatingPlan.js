@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const EatingPlan = require('../models/eatingPlan')
+const Users = require('../models/users')
 
 function getAll () {
   return EatingPlan.find({})
@@ -43,10 +44,17 @@ function getFindById (idEatingPlan) {
     })
 }
 
+async function getAllEatingPlans (idUser) {
+  const userPlans = await Users.findById(idUser)
+  const { eatingPlans } = userPlans
+  return eatingPlans
+}
+
 module.exports = {
   getAll,
   insertEatingPlan,
   create,
-  getFindById
+  getFindById,
+  getAllEatingPlans
 
 }
