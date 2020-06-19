@@ -24,7 +24,8 @@ router.get('/userDirection/:idUser', async (request, response) => {
 
 router.get('/userDirection/:idUser', async (request, response) => {
   try {
-    const allDirection = await direction.getAll()
+    const { idUser } = request.params
+    const allDirection = await direction.getAll(idUser)
     response.json({
       success: true,
       message: 'all directions',
