@@ -1,5 +1,8 @@
 const server = require('./src/server.js')
 const db = require('./src/lib/db')
+var cfenv = require('cfenv')
+// var app = express()
+var appEnv = cfenv.getAppEnv()
 
 // async function mainDevelopment () {
 //   await db.connectDevelopment()
@@ -8,6 +11,10 @@ const db = require('./src/lib/db')
 //     console.log('SERVER IS RUNNING')
 //   })
 // }
+
+server.listen(appEnv.port, appEnv.bind, function () {
+  console.log('server starting on ' + appEnv.url)
+})
 
 async function mainProductions () {
   await db.connectProductions()
