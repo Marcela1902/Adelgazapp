@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-var appEnv = cfenv.getAppEnv
+// var appEnv = cfenv.getAppEnv
 
 const usersRouter = require('./routes/users')
 const authRouter = require('./routes/auth')
@@ -32,8 +32,8 @@ app.use((request, response, next) => {
   next()
 })
 
-app.listen(appEnv.port, appEnv.bind,  function() {
-  util.log("server starting on " + appEnv.url)
+// app.listen(appEnv.port, appEnv.bind,  function() {
+//   util.log("server starting on " + appEnv.url)
 
 // app.set('port', process.env.PORT || 8080)
 app.use('/users', usersRouter)

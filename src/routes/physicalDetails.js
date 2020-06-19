@@ -3,9 +3,6 @@ const physicalDetails = require('../usecases/physicalDetails')
 const { EatingPlan } = require('../models/eatingPlan')
 const router = express.Router()
 
-
-
-
 /* router.get('/idT', async (request, response) => {
   const { idTest } = request.params
   try {
@@ -54,7 +51,7 @@ const router = express.Router()
 })
  */
 
-//Regresa un error si el test ya fue realizado
+// Regresa un error si el test ya fue realizado
 router.get('/:idUser', async (request, response) => {
   const { idUser } = request.params
   try {
@@ -79,7 +76,7 @@ router.post('/:idUser', async (request, response) => {
   const { idUser } = request.params
   const body = request.body
   try {
-    const newPhysicalDetails = await physicalDetails.create(idUser, body)
+    const newPhysicalDetails = await physicalDetails.createTest(idUser, body)
     response.json({
       success: true,
       message: '',
