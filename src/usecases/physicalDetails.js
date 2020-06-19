@@ -3,10 +3,10 @@ const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
 const { randomElements } = require('../utils/functions/random')
 
-function getAll () {
+function getAll() {
   return PhysicalDetails.find({})
 }
-async function create (idUser, physicalDetailsData) {
+async function create(idUser, physicalDetailsData) {
   const user = await Users.findById(idUser)
   if (!user) throw new Error('User does not exist with id: ' + idUser)
   if (user.idTest) throw new Error('El test ya fue realizado')
@@ -23,7 +23,7 @@ async function create (idUser, physicalDetailsData) {
   return { eatingPlans, objective, idTest, userEatingPlan }
 }
 
-async function infoTest (idUser) {
+async function infoTest(idUser) {
   const user = await Users.findById(idUser)
     .populate({
       path: 'eatingPlans idTest',
@@ -40,12 +40,21 @@ async function infoTest (idUser) {
   return user
 }
 
-function findById (idTest) {
+function findById(idTest) {
   return PhysicalDetails.findById(idTest)
 }
+
+async function getIdTest (idUser) {
+  var findUser = await Users.findById(idUser)
+  const { idTest } = findUser
+  if (idTest) throw new Error('testPerform')
+  return findUser
+}
+
 module.exports = {
   getAll,
   create,
   findById,
-  infoTest
+  infoTest,
+  getIdTest
 }
