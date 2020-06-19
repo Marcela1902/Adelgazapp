@@ -10,6 +10,7 @@ async function getAll (idUser) {
   const direct = Direction.findById(direction)
   return direct
 }
+
 function create (directionData) {
   directionData._id = new mongoose.Types.ObjectId()
   return Direction.create(directionData)
@@ -23,7 +24,7 @@ async function createAddress (idUser, directionData) {
   return user
 }
 
-async function findAddress(idDirection) {
+async function findAddress (idDirection) {
   const direction = await Direction.findById(idDirection)
   return direction
 }

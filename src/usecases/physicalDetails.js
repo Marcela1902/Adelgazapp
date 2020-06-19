@@ -2,8 +2,9 @@ const EatingPlan = require('../models/eatingPlan')
 const PhysicalDetails = require('../models/physicalDetails')
 const Users = require('../models/users')
 const { randomElements } = require('../utils/functions/random')
+const { unsubscribe } = require('../server')
 
-function getAll() {
+function getAll () {
   return PhysicalDetails.find({})
 }
 
@@ -33,25 +34,25 @@ async function insertPlan (idUser) {
 }
 
 async function infoTest (idUser) {
-  const user = await Users.findById(idUser)
-    .populate({
-      path: 'eatingPlans idTest',
+  const user = await Users.findById(idUser).populate({
+    path: 'eatingPlans idTest',
+    populate: {
+      path: 'diets dishes ingredients',
       populate: {
-        path: 'diets dishes ingredients',
+        path: 'dishes',
         populate: {
-          path: 'dishes',
-          populate: {
-            path: 'ingredients'
-          }
+          path: 'ingredients'
         }
       }
-    })
+    }
+  })
   return user
 }
 
-function findById(idTest) {
+function findById (idTest) {
   return PhysicalDetails.findById(idTest)
 }
+
 
 module.exports = {
   getAll,
